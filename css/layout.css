@@ -1,0 +1,58 @@
+#container
+{
+	width: 800px;
+	margin: 0 auto;
+}
+
+#image img
+{
+	height: 500px;
+	width: 500px;
+}
+
+#image, #title
+{
+	margin: 0 auto;
+	width: 500px;
+	text-align: center;
+}
+
+#title
+{
+	margin-top: 100px;
+}
+
+#form-container
+{
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 200px;
+	border: 1px solid black;
+}
+
+#form-container label
+{
+	width: 150px;
+	height: 70px;
+	margin-left: 120px;
+	margin-top: 20px;
+}
+
+h2
+{
+	text-align: center;
+}
+
+#form-container input
+{
+	margin-top: 10px;
+	margin-left: 50px;
+}
+
+#button
+{
+	width: 100px;
+	height: 40px;
+	margin-left: 240px !important;
+	margin-top: 10px;
+}
