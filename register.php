@@ -1,20 +1,15 @@
 <?php
 	include_once('user.php');
-	
-	if (session_status() == PHP_SESSION_NONE) {
-    	session_start();
-	}
 
-	if(isset($_POST['submit'])){
+	if(isset($_POST['submitReg'])){
 
 		$username = $_POST['username'];
 		$password = $_POST['password'];
+		$email = $_POST['email'];
 
 		$object = new User();
-		$object->Login($username, $password);
-
+		$object->Register($username, $password, $email);
 	}
-
 ?>
 
 <html>
@@ -26,16 +21,16 @@
 <body>
 
 	<div id="form-container">
-		<h2>Login</h2>
-		<form method="post" action="index.php">
+		<h2>Register</h2>
+		<form method="post" action="register.php">
 			<label for='username'>Username: </label>
 			<input type="text" name="username"/><br>
 			<label for='password'>Password: </label>
 			<input type="password" name="password"/><br>
-			<input type="submit" value="Submit" id="button" name="submit"/>
+			<label for='email'>Email: </label>
+			<input type="text" name="email"/><br>
+			<input type="submit" value="Submit" id="button" name="submitReg"/>
 		</form>
-		<br>
-		<a href="register.php">Register Here</a>
 	</div>
 
 </body>
