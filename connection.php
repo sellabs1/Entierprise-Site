@@ -5,13 +5,13 @@
 
 <?php
 
-class Connection{
-
+class Connection
+{
 	//Connection details
-	private $db_host = '127.0.0.1',
-			$db_name = 'sellabs1_temp',
-			$db_username = 'sellabs1',
-			$db_pass = '10005834';
+	private $db_host = 'localhost',
+			$db_name = 'CardDatabase',
+			$db_username = 'root',
+			$db_pass = 'KiwiDev1';
 
 	//dbConnect function. Returns the Data Object containing the database connection information
 	public function dbConnect(){
@@ -21,8 +21,8 @@ class Connection{
 			return new PDO("mysql:host=".$this->db_host.';dbname='.$this->db_name, 
 							$this->db_username, $this->db_pass);
 		}
-		catch(PDOException $e){
-
+		catch(PDOException $e)
+		{
 			$e->getMessage();
 		}
 	}

@@ -1,3 +1,11 @@
+<?php
+	include_once('user.php');
+	
+	if (session_id() == '') {
+    	session_start();
+	}
+?>
+
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">

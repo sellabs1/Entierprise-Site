@@ -1,5 +1,5 @@
 <!--
-	User class. 
+	User class. Contains Login, Logout, and register functions.
 -->
 
 <?php
@@ -16,7 +16,7 @@ class User{
 	public function __construct(){
 		
 		//Starts a session if there isn't one currently
-		if (session_status() == PHP_SESSION_NONE) {
+		if (session_id() == '') {
     		session_start();
 		}
 		
@@ -31,7 +31,7 @@ class User{
 		if(!empty($username) && !empty($password)){
 
 			//Prepared sql statement
-			$passQuery = $this->db->prepare("SELECT * FROM users2 WHERE username = ?");
+			$passQuery = $this->db->prepare("SELECT * FROM User WHERE Username = ?");
 			//Bind the passed in $username parameter to the prepared sql statement
 			$passQuery->bindParam(1, $username);
 			//Execute the prepared sql query
@@ -44,21 +44,30 @@ class User{
 
 				//Store the hashed password from the database and concatenate the salt
 				//to test against user input
-				$setPassword = $user['password'].$user['salt'];
-				$inputPassword = crypt($password, $setPassword).$user['salt'];
+				$setPassword = $user['Password'].$user['Salt'];
+				$inputPassword = crypt($password, $setPassword).$user['Salt'];
 
 				//If the passwords match, store the username in session array. Set login status to true
 				if($inputPassword == $setPassword){
 					$_SESSION['login'] = 'true';
 	    			$_SESSION['username'] = $username;
-					header('location: userHome.php');
+	    			
+	    			//Checks to see if the user has admin access
+	    			if($user['AdminAccess'] < 1){
+	    				header('location: userHome.php');
+	    			}
+	    			else{
+	    				header('location: adminHome.php');
+	    			}
 				}
 				else{
 					echo "Incorrect username or password </br>";
 				}
 			}
+			else{
+				echo "Incorrect username or password";
+			}
 		}
-
 		else{
 			echo "Please enter your username and password";
 		}
@@ -80,19 +89,25 @@ class User{
 			//Calls cryptPass function and passes in the users input password
 			$hashedPass = cryptPass($password);
 
+			//Sets admin flag to false
+			$adminAccess = 0;
+
 			//Prepared sql statement
-			$st = $this->db->prepare("INSERT INTO users2 (username, password, email, salt) VALUES (?, ?, ?, ?)");
+			$st = $this->db->prepare("INSERT INTO User (Username, Password, Email, Salt, AdminAccess) VALUES (?, ?, ?, ?, ?)");
 
 			//Binds user inputs into prepared statement
 			$st->bindParam(1, $username);
 			$st->bindParam(2, $hashedPass[0]);
 			$st->bindParam(3, $email);
 			$st->bindParam(4, $hashedPass[1]);
+			$st->bindParam(5, $adminAccess);
 
 			$result = $st->execute();
+			var_dump($result);
 
 			if($result){
-				echo("Success. You have been registered");
+				echo("<script>alert('Success. You have been registered');</script>");
+				echo("<script>setTimeout(\"location.href = 'index.php';\",500);</script>");
 			}
 			else{
 				echo("There has been a problem. Please try again");
