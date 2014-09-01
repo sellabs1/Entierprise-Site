@@ -103,7 +103,6 @@ class User{
 			$st->bindParam(5, $adminAccess);
 
 			$result = $st->execute();
-			var_dump($result);
 
 			if($result){
 				echo("<script>alert('Success. You have been registered');</script>");
