@@ -1,9 +1,21 @@
+<!--
+	Administrator Home Page. 
+-->
 <?php
+
 	include('user.php');
 	include('Crud.php');
 	
 	if (session_id() == '') {
     	session_start();
+
+
+    	if($_SESSION['username'] != 'Admin'){
+    		
+    		session_destroy();
+			header('location: index.php');
+    	}
+
 	}
 ?>
 
