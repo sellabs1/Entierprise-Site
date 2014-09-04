@@ -1,15 +1,15 @@
 <?php
 	include_once('user.php');
 
-	if(isset($_POST['submit'])){
+	if(isset($_POST['submitReg'])){
 
 		$username = $_POST['username'];
 		$password = $_POST['password'];
+		$email = $_POST['email'];
 
 		$object = new User();
-		$object->Login($username, $password);
+		$object->Register($username, $password, $email);
 	}
-
 ?>
 
 <html>
@@ -21,14 +21,13 @@
 <body>
 
 	<div id="form-container">
-		<h2>Login</h2>
-		<form method="post" action="index.php">
+		<h2>Register</h2>
+		<form method="post" action="register.php">
 			<input type="text" name="username" placeholder="Username"/><br>
 			<input type="password" name="password" placeholder="Password"/><br>
-			<input type="submit" value="Submit" id="button" name="submit"/>
+			<input type="text" name="email" placeholder="Email"/><br>
+			<input type="submit" value="Submit" id="button" name="submitReg"/>
 		</form>
-		<br>
-		<a href="register.php">Register Here</a>
 	</div>
 
 </body>

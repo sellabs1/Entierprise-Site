@@ -4,6 +4,24 @@
 	margin: 0 auto;
 }
 
+#admin-display-container
+{
+	width: 1000px;
+	height: 900px;
+	margin-left: 100px;
+	float: left;
+	overflow: scroll;
+}
+
+#admin-options
+{
+	float: right;
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+	margin-right: 100px;
+}
+
 #image img
 {
 	height: 500px;
@@ -30,12 +48,13 @@
 	border: 1px solid black;
 }
 
-#form-container label
+#form-container input[type=text], input[type=password]
 {
-	width: 150px;
-	height: 70px;
-	margin-left: 120px;
-	margin-top: 20px;
+	padding: 5px;
+	width: 250px;
+	margin: 5px;
+	font-size: 20px;
+	margin-left: 125px;
 }
 
 h2
@@ -43,11 +62,6 @@ h2
 	text-align: center;
 }
 
-#form-container input
-{
-	margin-top: 10px;
-	margin-left: 50px;
-}
 
 #button
 {
