@@ -8,7 +8,7 @@
 class Connection
 {
 	//Connection details
-	private $db_host = 'localhost',
+	private $db_host = '127.0.0.1',
 			$db_name = 'CardDatabase',
 			$db_username = 'root',
 			$db_pass = 'KiwiDev1';

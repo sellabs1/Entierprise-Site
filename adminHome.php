@@ -1,94 +1,99 @@
 <?php
-	include_once('user.php');
-	include('connection.php');
-
+	include('user.php');
+	include('Crud.php');
+	
 	if (session_id() == '') {
     	session_start();
 	}
-
-	$action = isset($_GET['action']) ? $_GET['action'] : "";
- 
-	// if it was redirected from delete.php
-	if($action=='deleted'){
-	    echo "<div>Record was deleted.</div>";
-	}
-
-	//select all data
-	$query = "SELECT CardId, Name, Value, Description FROM Card";
-	$stmt = $con->prepare( $query );
-	$stmt->execute();
-	 
-	//this is how to get number of rows returned
-	$num = $stmt->rowCount();
-	 
-	if($num>0){ //check if more than 0 records found
-	 
-	    echo "<table border='1'>";//start table
-	     
-	        //creating our table heading
-	        echo "<tr>";
-	            echo "<th>Name</th>";
-	            echo "<th>Value</th>";
-	            echo "<th>Description</th>";
-	            echo "<th>Action</th>";
-	        echo "</tr>";
-	         
-	        //retrieve our table contents
-	        //fetch() is faster than fetchAll()
-	        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-	            //extract row
-	            //this will make $row['Name'] to
-	            //just $Name only
-	            extract($row);
-	             
-	            //creating new table row per record
-	            echo "<tr>";
-	                echo "<td>{$Name}</td>";
-	                echo "<td>{$Value}</td>";
-	                echo "<td>{$Description}</td>";
-	                echo "<td>";
-	                    //we will use this links on next part of this post
-	                    echo "<a href='edit.php?id={$CardId}'>Edit</a>";
-	                    echo " / ";
-	                    //we will use this links on next part of this post
-	                    echo "<a href='#' onclick='delete_user( {$CardId} );'>Delete</a>";
-	                echo "</td>";
-	            echo "</tr>";
-	        }
-	     
-	    //end table
-	    echo "</table>";
-	     
-	}
-	 
-	//if no records found
-	else{
-	    echo "No records found.";
-	}
-	 
-	?>
-	 
-	<script type='text/javascript'>
-	function delete_user( id ){
-	     
-	    var answer = confirm('Are you sure?');
-	    if ( answer ){
-	     
-	        //if user clicked ok, pass the id to delete.php and execute the delete query
-	        window.location = 'delete.php?id=' + id;
-	    } 
-	}
-	</script>
+	echo $_SESSION['username'];
 ?>
 
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/table.css">
 </head>
 <body>
-	<div id="container">
-		<div id="title"><h1>Admin Page</h1></div>
-		<div id="image"></div>
+
+	<div id="title"><h1>Admin Page</h1></div>
+	<div id="admin-display-container">		
+		
+		<?php
+
+			if(isset($_POST['tableName'])){
+
+				$tableName = $_POST['tableName'];
+
+				$crud = new Crud();
+				$res = $crud->showTable($tableName);
+				$cols = $crud->getColumns($tableName);
+
+				echo "<table>";
+				echo "<tr>";
+
+				foreach($cols as $column){
+					echo "<th>".$column."</th>";
+				}
+
+				echo "<th>Action</th>";
+
+				echo "</tr>";
+
+				foreach($res as $row){
+
+					echo "<tr>";
+
+					for($i = 0; $i < count($cols); $i++){
+						echo "<td>".$row[$i]."</td>";
+					}
+
+		            echo "<td>";
+		                //we will use this links on next part of this post
+		                echo "<a href='edit.php?id={$id}'>Edit</a>";
+		                echo " / ";
+		                //we will use this links on next part of this post
+		                echo "<a href='#' onclick='delete_user( {$id} );'>Delete</a>";
+		            echo "</td>";
+		            
+		            echo "</tr>";
+	        	}
+	        	echo "</table>";
+        	}
+
+		?>
+
 	</div>
+
+	<div id="admin-options">
+
+		<h2>Select Table</h2>
+
+		<form  id="select-table-form" name ="select-table-form" method="post">
+			<select name = 'tableName' style = 'position: relative' onchange="change()">
+				<option value="ActionCard">ActionCard</option>
+				<option value="AttributeCard">AttributeCard</option>
+				<option value="AttributeGoal">AttributeGoal</option>
+				<option value="Card">Card</option>
+				<option value="CardDeck">CardDeck</option>
+				<option value="ChatMessage">ChatMessage</option>
+				<option value="Deck">Deck</option>
+				<option value="GoalCard">GoalCard</option>
+				<option value="Group">Group</option>
+				<option value="RuleCard">RuleCard</option>
+				<option value="Server">Server</option>
+				<option value="Type">Type</option>
+				<option value="User">User</option>
+				<option value="UserServer">UserServer</option>
+			</select>
+		</form>
+
+	</div>
+
+	<script>
+		function change(){
+		    document.getElementById("select-table-form").submit();
+		}
+	</script>
+
 </body>
 </html>

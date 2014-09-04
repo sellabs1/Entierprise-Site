@@ -4,6 +4,24 @@
 	margin: 0 auto;
 }
 
+#admin-display-container
+{
+	width: 1000px;
+	height: 900px;
+	margin-left: 100px;
+	float: left;
+	overflow: scroll;
+}
+
+#admin-options
+{
+	float: right;
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+	margin-right: 100px;
+}
+
 #image img
 {
 	height: 500px;
@@ -26,15 +44,8 @@
 {
 	width: 500px;
 	margin: 0 auto;
-	overflow: auto;
 	margin-top: 200px;
 	border: 1px solid black;
-	font-family: sling;
-}
-
-h2
-{
-	text-align: center;
 }
 
 #form-container input[type=text], input[type=password]
@@ -46,10 +57,16 @@ h2
 	margin-left: 125px;
 }
 
+h2
+{
+	text-align: center;
+}
+
+
 #button
 {
 	width: 100px;
 	height: 40px;
-	margin-left: 200px !important;
+	margin-left: 240px !important;
 	margin-top: 10px;
 }
