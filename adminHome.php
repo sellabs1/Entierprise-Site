@@ -34,20 +34,23 @@
 			if(isset($_POST['tableName'])){
 
 				$tableName = $_POST['tableName'];
+				$_SESSION['tableName'] = $tableName;
 
 				$crud = new Crud();
 				$res = $crud->showTable($tableName);
 				$cols = $crud->getColumns($tableName);
 
+				echo "<h2>Table: ".$tableName."</h2>";	
+
 				echo "<table>";
 				echo "<tr>";
 
+				//Loops through columns and creates table header for each one	
 				foreach($cols as $column){
 					echo "<th>".$column."</th>";
 				}
 
 				echo "<th>Action</th>";
-
 				echo "</tr>";
 
 				foreach($res as $row){
@@ -59,8 +62,9 @@
 					}
 
 		            echo "<td>";
+
 		                //we will use this links on next part of this post
-		                echo "<a href='edit.php?id={$id}'>Edit</a>";
+		                echo "<a href='edit.php?id=".$row[0]."'>Edit</a>";
 		                echo " / ";
 		                //we will use this links on next part of this post
 		                echo "<a href='#' onclick='delete_user( {$id} );'>Delete</a>";
