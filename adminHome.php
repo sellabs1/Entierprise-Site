@@ -23,6 +23,8 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/table.css">
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="scripts/js-functions.js"></script>
 </head>
 <body>
 
@@ -31,11 +33,15 @@
 		
 		<?php
 
+			//Checks for 'tableName' in $_POST
 			if(isset($_POST['tableName'])){
 
+				//Store tableName from POST in $tableName variable
 				$tableName = $_POST['tableName'];
+				//Store tableName in SESSION
 				$_SESSION['tableName'] = $tableName;
 
+				//Instantiate Crud class
 				$crud = new Crud();
 				$res = $crud->showTable($tableName);
 				$cols = $crud->getColumns($tableName);
@@ -63,11 +69,12 @@
 
 		            echo "<td>";
 
-		                //we will use this links on next part of this post
+		                //Takes you to the edit page for the specified table row
 		                echo "<a href='edit.php?id=".$row[0]."'>Edit</a>";
 		                echo " / ";
-		                //we will use this links on next part of this post
-		                echo "<a href='#' onclick='delete_user( {$id} );'>Delete</a>";
+
+		                //Deletes the chosen row from the database
+		                echo "<a href='#' onclick='$crud->deleteRow($cols, $tableName, $row[0]);'>Delete</a>";
 		            echo "</td>";
 		            
 		            echo "</tr>";
@@ -84,6 +91,7 @@
 		<h2>Select Table</h2>
 
 		<form  id="select-table-form" name ="select-table-form" method="post">
+
 			<select name = 'tableName' style = 'position: relative' onchange="change()">
 				<option value="ActionCard">ActionCard</option>
 				<option value="AttributeCard">AttributeCard</option>
@@ -100,15 +108,10 @@
 				<option value="User">User</option>
 				<option value="UserServer">UserServer</option>
 			</select>
+
 		</form>
 
 	</div>
-
-	<script>
-		function change(){
-		    document.getElementById("select-table-form").submit();
-		}
-	</script>
-
+	
 </body>
 </html>

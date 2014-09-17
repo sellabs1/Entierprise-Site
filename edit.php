@@ -19,9 +19,14 @@
 	
 	//Instantiates Crud class
 	$crud = new Crud();
-	//Stores associative array of column names in $res
+
+	//Stores associative array of column names in $columns
 	$columns = $crud->getColumns($table);
 	$rowId = $_REQUEST['id'];
+
+	if(isset($_POST['editUpdate'])){
+		$crud->updateFields($columns, $table, $rowId);
+	}
 ?>
 
 <html>
@@ -29,14 +34,22 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/table.css">
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="scripts/js-functions.js"></script>
 </head>
 
 <body>
-	<?php
 
-		$crud->showEditFields($columns, $table, $rowId);
+	<div id="edit-container">
 
-	?>
+		<?php
+
+			$crud->showEditFields($columns, $table, $rowId);
+			
+		?>
+
+	</div>
+
 </body>
 
 </html>
