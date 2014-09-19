@@ -46,9 +46,10 @@
 				$crud->getServers();
 
 			?>
+			<form id="back-form" method="POST" action="#">
+				<input type="submit" value="Back" name="Back">
+			</form>
 		</div>
-		
-		<input type="submit" value="Back" name="Back">
 
 	</div>
 </body>
