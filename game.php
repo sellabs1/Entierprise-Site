@@ -15,6 +15,9 @@
 		$object->Logout();
 	}
 
+	if(isset($_POST['server-submit'])){
+		$serverAddress = $_POST[''];
+	}
 ?>
 
 <html>
@@ -38,7 +41,7 @@
 
 	<div id ="container">
 
-		<iframe src="http://crucial.ict.op.ac.nz:3000" width="1000" height="900"></iframe>
+		<?php echo "<iframe src='http://".$_POST['serverAddress'].":".$_POST['serverPort']."?username='".$_SESSION['username']."' width='1000' height='900'></iframe>" ?>
 
 	</div>
 

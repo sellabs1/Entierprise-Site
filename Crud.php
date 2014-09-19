@@ -99,6 +99,7 @@ class Crud{
 		$query->execute();
 	}
 
+	//delet row function.
 	public function deleteRow($columns, $table, $id){
 
 		$rowId = $columns[0];
@@ -120,43 +121,49 @@ class Crud{
 		}
 	}
 
+	//getServers function. Prints a list of current servers for the user to choose
 	public function getServers(){
 		
 		try{
 			$result = $this->showTable('Server');
 			$cols = $this->getColumns('Server');
+			$rowCount = 0;
 			
 			if($result){
 
 				echo "<table>";
-				echo "<tr>";
 
-				foreach ($cols as $column) {
-					echo "<th>".$column."</th>";
-				}
-
-				echo "<th>Select</th>";
-				echo "</tr>";
-
-				foreach ($result as $row) {
-					
 					echo "<tr>";
+						echo "<th>".$cols['ServerName']."</th>";
+						echo "<th>".$cols['Location']."</th>";
+						echo "<th>".$cols['CurrentStatus']."</th>";
+						echo "<th>Select</th>";
+					echo "</tr>";
 
-					for($i = 0; $i < count($cols); $i++){
-						echo "<td>".$row[$i]."</td>";
+					foreach ($result as $row) {
+						echo "<form id='server-form' method='POST' action='game.php'>";
+							echo "<tr>";
+
+								echo "<td>".$row['ServerName']."</td>";
+								echo "<td>".$row['Location']."</td>";
+								echo "<td>".$row['CurrentStatus']."</td>";
+								echo "<input type='hidden' name='serverAddress' value='".$row['ServerAddress']."'>";
+								echo "<input type='hidden' name='serverPort' value='".$row['ServerPort']."'>";
+
+								echo "<td><input type='submit' name='server-submit' value='Submit'></td>";
+							echo "</tr>";
+						echo "</form>";
+
+						$rowCount ++;
 					}
 
-					echo "<td><input type='checkbox'/></td>";
-					echo "</tr>";
-				}
-
 				echo "</table>";
+
 			}
 			else{
 				echo "There are no Servers to show";
 			}
 		}
-
 		catch(PDOException $exception){
 			echo "Error: ". $exception->getMessage();
 		}

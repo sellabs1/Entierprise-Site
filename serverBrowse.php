@@ -20,6 +20,7 @@
 
 		header("Location: userHome.php");
 	}
+
 ?>
 
 <html>
@@ -30,7 +31,7 @@
 <body>
 
 	<div id="container">
-		<form method="POST" action="game.php">
+
 			<div id="serverList">
 				<?php
 
@@ -39,6 +40,7 @@
 
 				?>
 			</div>
+
 			<input type="submit" value="Join" name="Join">
 			<input type="submit" value="Back" name="Back">
 		</form>
