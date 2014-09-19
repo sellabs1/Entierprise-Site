@@ -123,8 +123,8 @@ class Crud{
 	public function getServers(){
 		
 		try{
-			$result = $this->showTable('users2');
-			$cols = $this->getColumns('users2');
+			$result = $this->showTable('Server');
+			$cols = $this->getColumns('Server');
 			
 			if($result){
 
