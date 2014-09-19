@@ -2,6 +2,9 @@
 
 	include('user.php');
 	include('Crud.php');
+
+	//Instantiates Crud class
+	$crud = new Crud();
 	
 	if (session_id() == '') {
     	
@@ -14,19 +17,17 @@
     	}
 	}
 
+	//If editUpdate button is clicked, run the updateFields method
+	if(isset($_POST['editUpdate'])){
+		$crud->updateFields($columns, $table, $rowId);
+	}
+
 	//Holds selected table name	
 	$table = $_SESSION['tableName'];
-	
-	//Instantiates Crud class
-	$crud = new Crud();
 
 	//Stores associative array of column names in $columns
 	$columns = $crud->getColumns($table);
 	$rowId = $_REQUEST['id'];
-
-	if(isset($_POST['editUpdate'])){
-		$crud->updateFields($columns, $table, $rowId);
-	}
 ?>
 
 <html>
@@ -43,7 +44,7 @@
 	<div id="edit-container">
 
 		<?php
-
+			//Shows the fields for the passed in table 
 			$crud->showEditFields($columns, $table, $rowId);
 			
 		?>
