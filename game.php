@@ -38,7 +38,7 @@
 
 	<div id ="container">
 
-		<?php echo "<iframe src='http://".$_POST['serverAddress'].":".$_POST['serverPort']."?username=".$_SESSION['username']." width='1000' height='900'></iframe>" ?>
+		<?php echo "<iframe src='http://".$_POST['serverAddress'].":".$_POST['serverPort']."?username=".$_SESSION['username']."></iframe>" ?>
 
 	</div>
 

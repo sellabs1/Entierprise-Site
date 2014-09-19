@@ -151,3 +151,9 @@ textarea
 	width: 50%;
 	margin-left: 50px;
 }
+
+iframe
+{
+	 width: 1000px; 
+	 height: 900px;
+}
