@@ -38,7 +38,9 @@
 
 	<div id ="container">
 
-		<?php echo "<iframe src='http://".$_POST['serverAddress'].":".$_POST['serverPort']."?username=".$_SESSION['username']."></iframe>"; ?>
+		<?php echo "<iframe src='http://".$_POST['serverAddress'].":".$_POST['serverPort']."?username=".$_SESSION['username']."></iframe>";
+		echo "titty sprinkles";
+		 ?>
 
 	</div>
 
