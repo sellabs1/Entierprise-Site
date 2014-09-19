@@ -39,7 +39,6 @@
 			<li><a href="help.php">Help</a></li>
 			<li><a href="settings.php">Settings</a></li>
 			<li><a href="tutorial.php">Tutorial</a></li>
-			<li><a href="index.php">Exit</a></li>
 		</ul>
 
 		<form method="POST" action="userHome.php">
