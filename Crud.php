@@ -25,6 +25,16 @@ class Crud{
 		return $query->fetchAll(PDO::FETCH_NUM);
 	}
 
+	//showTableAssoc function. Returns associative array of passed in table.
+	public function showTableAssoc($table){
+
+		$query = $this->db->prepare("SELECT * FROM $table");
+		$query->execute();
+
+		//Returns an associative array
+		return $query->fetchAll(PDO::FETCH_ASSOC);
+	}
+
 	//getColumn	function. Grabs all column names from the table that is passed to it.
 	public function getColumns($table){
 
@@ -125,7 +135,7 @@ class Crud{
 	public function getServers(){
 		
 		try{
-			$result = $this->showTable('Server');
+			$result = $this->showTableAssoc('Server');
 			$cols = $this->getColumns('Server');
 			
 			if($result){
