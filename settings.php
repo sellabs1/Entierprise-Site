@@ -39,7 +39,7 @@
 			<li><a href="userHome.php">Home</a></li>
 		</ul>
 
-		<form method="POST" action="userHome.php">
+		<form method="POST" action="#">
 			<input type="submit" class="button" value="Logout" name="logout">
 		</form>
 	</div>
