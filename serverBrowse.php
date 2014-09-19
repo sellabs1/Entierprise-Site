@@ -10,6 +10,11 @@
     	echo 'Username: <b>'.$_SESSION['username'].'</b>';
 	}
 
+	if ($_SESSION['username'] == '') {
+		session_destroy();
+    	header('location: index.php');
+	}
+
 	if(isset($_POST['logout'])){
 
 		$object = new User();
@@ -32,17 +37,18 @@
 
 	<div id="container">
 
-			<div id="serverList">
-				<?php
+	<h1>Server Browse Page</h1>
 
-					$crud = new Crud();
-					$crud->getServers();
+		<div id="serverList">
+			<?php
 
-				?>
-			</div>
+				$crud = new Crud();
+				$crud->getServers();
 
-			<input type="submit" value="Back" name="Back">
-		</form>
+			?>
+		</div>
+
+		<input type="submit" value="Back" name="Back">
 
 	</div>
 </body>

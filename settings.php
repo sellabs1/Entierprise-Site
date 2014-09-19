@@ -5,6 +5,11 @@
     	session_start();
 	}
 
+	if ($_SESSION['username'] == '') {
+		session_destroy();
+    	header('location: index.php');
+	}
+
 	if($_SESSION['login'] == 'true') {
     	echo 'Username: <b>'.$_SESSION['username'].'</b>';
 	}
@@ -37,7 +42,7 @@
 	</div>
 
 	<div id ="container">
-		<h1></h1>
+		<h1>Settings Page</h1>
 	</div>
 
 </body>

@@ -9,6 +9,11 @@
     	echo 'Username: <b>'.$_SESSION['username'].'</b>';
 	}
 
+	if ($_SESSION['username'] == '') {
+		session_destroy();
+    	header('location: index.php');
+	}
+
 	if(isset($_POST['logout'])){
 
 		$object = new User();

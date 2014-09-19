@@ -10,6 +10,11 @@
     	session_start();
 	}
 
+	if ($_SESSION['username'] == '') {
+		session_destroy();
+    	header('location: index.php');
+	}
+
 	if($_SESSION['login'] == 'true') {
     	echo 'Username: <b>'.$_SESSION['username'].'</b>';
 	}
@@ -43,7 +48,7 @@
 	</div>
 
 	<div id="container">
-
+	<h1>User Home Page</h1>
 		<div id="title"><h1><?php echo "Welcome ".$_SESSION['username']; ?></h1></div>
 
 	</div>
