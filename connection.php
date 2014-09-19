@@ -8,7 +8,7 @@
 class Connection
 {
 	//Connection details
-	private $db_host = '127.0.0.1',
+	private $db_host = 'crucial.ict.op.ac.nz',
 			$db_name = 'CardDatabase',
 			$db_username = 'crucialadmin',
 			$db_pass = 'XDsYG2pjvSUtBLfh';
