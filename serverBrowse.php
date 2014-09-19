@@ -41,7 +41,6 @@
 				?>
 			</div>
 
-			<input type="submit" value="Join" name="Join">
 			<input type="submit" value="Back" name="Back">
 		</form>
 

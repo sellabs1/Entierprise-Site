@@ -158,7 +158,7 @@ class Crud{
 								echo "<input type='hidden' name='serverAddress' value='".$row['ServerAddress']."'>";
 								echo "<input type='hidden' name='serverPort' value='".$row['ServerPort']."'>";
 
-								echo "<td><input type='submit' name='server-submit' value='Submit'></td>";
+								echo "<td><input type='submit' name='server-submit' value='Join'></td>";
 								echo "</form>";
 							echo "</tr>";
 					}
