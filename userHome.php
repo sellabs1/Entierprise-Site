@@ -28,7 +28,7 @@
 <body>
 	<div id="container">
 		<div id="title"><h1>You Have Logged In Successfully</h1></div>
-		<iframe src="crucial.ict.op.ac.nz:3000" width="1000" height="900"></iframe>
+		<iframe src="http://crucial.ict.op.ac.nz:3000" width="1000" height="900"></iframe>
 		<form method="POST" action="userHome.php">
 			<input type="submit" value="Logout" name="logout">
 		</form>
