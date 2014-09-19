@@ -15,9 +15,6 @@
 		$object->Logout();
 	}
 
-	if(isset($_POST['server-submit'])){
-		$serverAddress = $_POST[''];
-	}
 ?>
 
 <html>
