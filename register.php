@@ -16,6 +16,7 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<title>Entierprise - Register</title>
 </head>
 
 <body>

@@ -54,7 +54,7 @@ class Crud{
 		//Displays the edit form for the selected row
 		echo "<form id='editForm' name='editForm' method='post' action='#'>";
 
-		//Displays each field from the selected row in text areas
+		//Displays each field from the selected row in textareas
 		for($i = 0; $i < $colCount; $i++){
 			echo "<label for='".$columns[$i]."'>".$columns[$i]."</label>";
 			echo "<textarea class='textarea' name='".$columns[$i]."'>".$fields[$i]."</textarea></br>";	
@@ -112,6 +112,48 @@ class Crud{
 			}
 			else{
 				die('Unable to delete record.');
+			}
+		}
+
+		catch(PDOException $exception){
+			echo "Error: ". $exception->getMessage();
+		}
+	}
+
+	public function getServers(){
+		
+		try{
+			$result = $this->showTable('users2');
+			$cols = $this->getColumns('users2');
+			
+			if($result){
+
+				echo "<table>";
+				echo "<tr>";
+
+				foreach ($cols as $column) {
+					echo "<th>".$column."</th>";
+				}
+
+				echo "<th>Select</th>";
+				echo "</tr>";
+
+				foreach ($result as $row) {
+					
+					echo "<tr>";
+
+					for($i = 0; $i < count($cols); $i++){
+						echo "<td>".$row[$i]."</td>";
+					}
+
+					echo "<td><input type='checkbox'/></td>";
+					echo "</tr>";
+				}
+
+				echo "</table>";
+			}
+			else{
+				echo "There are no Servers to show";
 			}
 		}
 
