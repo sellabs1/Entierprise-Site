@@ -18,7 +18,7 @@ $(document).ready(function(){
    		$.post('usernameCheck.php', {'username':username}, function(data) { //make ajax call to usernameCheck.php
   			//dump the data received from PHP page
   			$("#user-result").html(data);
-  			if(data == "Username already exists"){
+  			if(data === "Username already exists"){
   				$('#button').prop('disabled', true);
   			}
   			else{
