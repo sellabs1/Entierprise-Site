@@ -29,9 +29,9 @@
         
         //if value is more than 0, username is not available
         if($username_exist) {
-            echo "Username already exists.";
+            echo "1";
         }else{
-            echo "Username available.";
+            echo "0";
         }
         
         //close db connection
