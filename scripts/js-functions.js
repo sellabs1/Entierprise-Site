@@ -37,6 +37,7 @@ $(document).ready(function(){
 			button.prop('disabled', true);
 		}
 		else{
+			$("#pass-result").html("").fadeIn();
 			button.prop('disabled', false);
 		}
 	});

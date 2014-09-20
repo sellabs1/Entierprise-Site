@@ -57,10 +57,10 @@
 	margin-left: 125px;
 }
 
-#user-result
+#user-result, #pass-result
 {
 	position: fixed;
-	
+
 }
 
 h2
