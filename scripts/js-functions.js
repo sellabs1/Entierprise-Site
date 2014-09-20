@@ -11,6 +11,7 @@ function deleteRecord(id){
 }
 
 $(document).ready(function(){
+	//Tests to see whether the username exists in the database
 	$("#regUsername").keyup(function (e) { //user types username on inputfiled
 
    		var username = $(this).val(); //get the string typed by user
@@ -27,7 +28,9 @@ $(document).ready(function(){
    		});
 	});
 
+	//Tests to see whether the user has input the same passwords for registering
 	$("#confPass").on('keyup', function(){
+
 		var pass = $("#pass").val();
 		var confPass = $("#confPass").val();
 		var button = $('#button');
