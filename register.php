@@ -20,6 +20,7 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<script src="scripts/jquery.autosize.min.js"></script>
 	<script src="scripts/js-functions.js"></script>
 	<title>Entierprise - Register</title>
 </head>
