@@ -9,13 +9,15 @@ function change(){
 		
 // 	}
 // }
+$(document).ready(function(){
+	$("#regUsername").keyup(function (e) { //user types username on inputfiled
 
-$("#regUsername").keyup(function (e) { //user types username on inputfiled
+   		var username = $(this).val(); //get the string typed by user
 
-   	var username = $(this).val(); //get the string typed by user
+   		$.post('usernameCheck.php', {'username':username}, function(data) { //make ajax call to usernameCheck.php
+  			$("#user-result").html(data); //dump the data received from PHP page
+   		});
+	});
+})
 
-   	$.post('usernameCheck.php', {'username':username}, function(data) { //make ajax call to usernameCheck.php
-  		$("#user-result").html(data); //dump the data received from PHP page
-   	});
-});
 
