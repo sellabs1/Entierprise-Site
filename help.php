@@ -15,7 +15,6 @@
 	}
 
 	if(isset($_POST['logout'])){
-
 		$object = new User();
 		$object->Logout();
 	}
@@ -38,7 +37,7 @@
 			<li><a href="tutorial.php">Tutorial</a></li>
 			<li><a href="userHome.php">Home</a></li>
 		</ul>
-		
+
 		<form method="POST" action="userHome.php">
 			<input type="submit" class="button" value="Logout" name="logout">
 		</form>
