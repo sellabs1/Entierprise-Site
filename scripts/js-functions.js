@@ -17,14 +17,28 @@ $(document).ready(function(){
 
    		$.post('usernameCheck.php', {'username':username}, function(data) { //make ajax call to usernameCheck.php
   			if(data == "1"){
-  				$("#user-result").html("<img src='../images/userExists.gif' />").fadeIn(300);
+  				$("#user-result").html("<img src='../images/userExists.gif' />").fadeIn();
   				$('#button').prop('disabled', true);
   			}
   			else{
-  				$("#user-result").html("<img src='../images/userAvailable.gif' />").fadeIn(300);
+  				$("#user-result").html("<img src='../images/userAvailable.gif' />").fadeIn();
   				$('#button').prop('disabled', false);
   			} 
    		});
+	});
+
+	$("#confPass").on('keyup', function(){
+		var pass = $("#pass").val();
+		var confPass = $("#confPass").val;
+		var button = $('#button');
+
+		if(pass != confPass){
+			$("#pass-result").html("<img src='../images/passMatch.gif' />").fadeIn();
+			button.prop('disabled', true);
+		}
+		else{
+			button.prop('disabled', false);
+		}
 	});
 })
 

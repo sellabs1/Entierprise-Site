@@ -32,8 +32,9 @@
 		<form method="post" action="register.php">
 			<input id="regUsername" type="text" name="username" placeholder="Username" required/>
 			<span id="user-result"></span><br>
-			<input type="password" name="password" placeholder="Password" required/><br>
-			<input type="password" name="confPassword" placeholder="Confirm Password" required/><br>
+			<input id="pass" type="password" name="password" placeholder="Password" required/><br>
+			<input id="confPass" type="password" name="confPassword" placeholder="Confirm Password" required/>
+			<span id="pass-result"></span><br>
 			<input type="text" name="email" placeholder="Email" required/><br>
 			<input type="submit" value="Submit" id="button" name="submitReg"/>
 		</form>
