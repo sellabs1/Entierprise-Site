@@ -57,6 +57,12 @@
 	margin-left: 125px;
 }
 
+#user-result
+{
+	position: fixed;
+	
+}
+
 h2
 {
 	text-align: center;

@@ -2,13 +2,14 @@ function change(){
 	document.getElementById("select-table-form").submit();
 }
 
-// function deleteRecord(id){
+function deleteRecord(id){
 
-// 	var answer = confirm('Are you sure you want to delete this record?');
-// 	if(answer){
+	var answer = confirm('Are you sure you want to delete this record?');
+	if(answer){
 		
-// 	}
-// }
+	}
+}
+
 $(document).ready(function(){
 	$("#regUsername").keyup(function (e) { //user types username on inputfiled
 

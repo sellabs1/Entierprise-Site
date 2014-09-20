@@ -33,6 +33,7 @@
 			<input id="regUsername" type="text" name="username" placeholder="Username"/>
 			<span id="user-result"></span><br>
 			<input type="password" name="password" placeholder="Password"/><br>
+			<input type="password" name="confPassword" placeholder="Password"/><br>
 			<input type="text" name="email" placeholder="Email"/><br>
 			<input type="submit" value="Submit" id="button" name="submitReg"/>
 		</form>
