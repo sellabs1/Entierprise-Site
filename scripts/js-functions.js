@@ -17,11 +17,11 @@ $(document).ready(function(){
 
    		$.post('usernameCheck.php', {'username':username}, function(data) { //make ajax call to usernameCheck.php
   			if(data == "1"){
-  				$("#user-result").html("<img src='../images/userExists.gif' />").fadeIn();
+  				$("#user-result").html("<img src='../images/userExists.gif' />").fadeIn(300);
   				$('#button').prop('disabled', true);
   			}
   			else{
-  				$("#user-result").html("<img src='../images/userAvailable.gif' />").fadeIn();
+  				$("#user-result").html("<img src='../images/userAvailable.gif' />").fadeIn(300);
   				$('#button').prop('disabled', false);
   			} 
    		});
