@@ -45,7 +45,7 @@
 	width: 500px;
 	margin: 0 auto;
 	margin-top: 200px;
-	border: 1px solid #3C3E45;
+	border: 1px groove #3C3E45;
 	border-radius: 20px;
 	box-shadow: 2px 3px 4px 0px rgba(50, 50, 50, 0.75);
 }
@@ -57,6 +57,7 @@
 	margin: 5px;
 	font-size: 20px;
 	margin-left: 125px;
+	border-radius: 5px;
 }
 
 #user-result, #pass-result
