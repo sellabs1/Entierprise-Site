@@ -16,7 +16,14 @@ $(document).ready(function(){
    		var username = $(this).val(); //get the string typed by user
 
    		$.post('usernameCheck.php', {'username':username}, function(data) { //make ajax call to usernameCheck.php
-  			$("#user-result").html(data); //dump the data received from PHP page
+  			//dump the data received from PHP page
+  			$("#user-result").html(data);
+  			if(data == "Username already exists"){
+  				$('#button').prop('disabled', true);
+  			}
+  			else{
+  				$('#button').prop('disabled', false);
+  			} 
    		});
 	});
 })
