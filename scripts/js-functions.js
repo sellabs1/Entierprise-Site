@@ -17,11 +17,11 @@ $(document).ready(function(){
 
    		$.post('usernameCheck.php', {'username':username}, function(data) { //make ajax call to usernameCheck.php
   			if(data == "1"){
-  				$("#user-result").html("Username already exists");
+  				$("#user-result").html("<img src='../images/userExists.gif' />").fadeIn();
   				$('#button').prop('disabled', true);
   			}
   			else{
-  				$("#user-result").html("Username is available");
+  				$("#user-result").html("<img src='../images/userAvailable.gif' />").fadeIn();
   				$('#button').prop('disabled', false);
   			} 
    		});
