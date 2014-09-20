@@ -20,7 +20,7 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
-	<script type="text/javascript" src="scripts/js-functions.js"></script>
+	<script src="scripts/js-functions.js"></script>
 	<title>Entierprise - Register</title>
 </head>
 
