@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 	$("#confPass").on('keyup', function(){
 		var pass = $("#pass").val();
-		var confPass = $("#confPass").val;
+		var confPass = $("#confPass").val();
 		var button = $('#button');
 
 		if(pass != confPass){
