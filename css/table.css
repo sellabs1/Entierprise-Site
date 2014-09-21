@@ -40,5 +40,6 @@
 #server-table td, #server-table th
 {
 	width: 20%;
+	text-align: center;
 	height: 30px !important;
 }
