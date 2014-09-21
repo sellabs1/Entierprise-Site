@@ -5,10 +5,6 @@
     	session_start();
 	}
 
-	if($_SESSION['login'] == 'true') {
-    	echo 'Username: <b>'.$_SESSION['username'].'</b>';
-	}
-
 	if ($_SESSION['username'] == '') {
 		session_destroy();
     	header('location: index.php');
