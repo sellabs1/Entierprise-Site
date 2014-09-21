@@ -61,7 +61,7 @@
 	width: 802px;
 	height: 450px;
 	margin: 0 auto;
-	margin-top: 250px;
+	margin-top: 220px;
 	border-radius: 20px;
 	padding-bottom: 10px;
 }
@@ -69,11 +69,16 @@
 .form-container input[type=text], input[type=password]
 {
 	padding: 5px;
-	width: 250px;
+	width: 400px;
 	margin: 5px;
 	font-size: 20px;
-	margin-left: 125px;
+	margin-left: 201px;
 	border-radius: 5px;
+}
+
+.form-container input[type=text]:first-child
+{
+	margin-top: 150px;
 }
 
 #user-result, #pass-result
