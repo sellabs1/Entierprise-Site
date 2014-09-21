@@ -96,6 +96,9 @@ h2
 	margin: 0 auto;
 	padding: 0px !important;
 	background-color: transparent;
+	box-sizing: none;
+	-webkit-appearance: none;
+
 }
 
 #edit-container, #serverList
