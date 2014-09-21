@@ -162,6 +162,16 @@ h2
 	cursor: pointer;
 }
 
+#main-menu
+{
+	width: 802px;
+	height: 457px;
+	position: absolute;
+	float: right;
+	margin-top: 220px;
+	margin-right: 150px;
+}
+
 #welcome
 {
 	font-family: Mont-Bold;

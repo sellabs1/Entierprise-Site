@@ -45,6 +45,8 @@
 				
 		</div>
 
+		<div id="main-menu"></div> 
+
 		<div id="title"><h1 id='welcome'><?php echo "Welcome ".$_SESSION['username']; ?></h1></div>
 	</div>
 </body>
