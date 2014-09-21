@@ -167,9 +167,8 @@ h2
 	width: 802px;
 	height: 457px;
 	position: absolute;
-	float: right;
 	margin-top: 220px;
-	margin-right: 150px;
+	margin-left: 382px;
 	background-image: url('../images/main-menu-screen.gif');
 	background-size: cover;
 	background-position: center;
