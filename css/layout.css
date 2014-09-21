@@ -191,8 +191,7 @@ h2
 {
 	width: 1048px;
 	height: 574px;
-	left: 0;
-	right: 0;
+	left: 180px;
 	margin-top: 210px;
 	background-image: url('../images/server-screen.gif');
 	position: absolute;
