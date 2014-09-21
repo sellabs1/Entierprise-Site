@@ -39,6 +39,8 @@
 			<li id="tutorial"><a href="tutorial.php">Tutorial</a></li>
 		</ul>
 
+		<div id="list-test"><img src="images/menu-start.gif"></div>
+
 		<form method="POST" action="userHome.php">
 			<input type="submit" class="button" value="Logout" name="logout">
 		</form>
