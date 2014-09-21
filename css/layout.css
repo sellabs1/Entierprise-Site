@@ -162,6 +162,11 @@ h2
 	cursor: pointer;
 }
 
+#welcome
+{
+	font-family: Mont-Bold;
+}
+
 #edit-container, #serverList
 {
 	width: 500px;
