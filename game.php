@@ -28,15 +28,13 @@
 <body>
 
 	<div id ="nav">
-		<ul>
-			<li><a href="help.php">Help</a></li>
-			<li><a href="settings.php">Settings</a></li>
-			<li><a href="tutorial.php">Tutorial</a></li>
-			<li><a href="userHome.php">Home</a></li>
-		</ul>
-		
 		<form method="POST" action="userHome.php">
-			<input type="submit" class="button" value="Logout" name="logout">
+			<ul>
+				<li id="menu-tutorial"><a href="tutorial.php"></a></li>
+				<li id="menu-help"><a href="help.php"></a></li>
+				<li id="menu-settings"><a href="settings.php"></a></li>
+				<li id="menu-exit"><input type="submit" class="logout-button" value="" name="logout"></li>
+			</ul>
 		</form>
 	</div>
 

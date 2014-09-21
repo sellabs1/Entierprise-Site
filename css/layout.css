@@ -6,6 +6,7 @@
 	margin-top: 100px;
 	background-image: url('../images/background.gif');
 	position: relative;
+	border: 3px solid #434A54;
 }
 
 #admin-display-container
@@ -202,11 +203,6 @@ textarea
 #nav li:hover
 {
 	font-weight: bolder;
-}
-
-#nav ul li:hover
-{
-	padding: 10px;
 }
 
 .button
