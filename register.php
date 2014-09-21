@@ -27,7 +27,7 @@
 
 <body>
 	<div id="container">
-		<div id="form-container">
+		<div class="form-container" id="register-form">
 			<h2>Register</h2>
 			<form method="post" action="register.php">
 				<input id="regUsername" type="text" name="username" placeholder="Username" required/>
