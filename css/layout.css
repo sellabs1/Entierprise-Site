@@ -163,6 +163,7 @@ textarea
 #nav #menu-exit
 {
 	background-image: url('../images/menu-exit.gif');
+	cursor: pointer;
 }
 
 #nav ul
