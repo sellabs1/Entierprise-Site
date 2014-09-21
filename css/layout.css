@@ -55,6 +55,11 @@
 	background-image: url('../images/register-form-1.gif');
 }
 
+#login-form
+{
+	background-image: url('../images/login-form.gif');
+}
+
 .form-container
 {
 	font-family: Mont-Bold;
@@ -114,6 +119,24 @@ h2
 	margin-top: 10px;
 	border-radius: 5px;
 	background-image: url('../images/register-register-button.gif');
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: 0;
+	background-position: center;
+	background-size: cover;
+	-webkit-appearance: none;
+	cursor: pointer;
+	display: block;
+}
+
+#login-button
+{
+	width: 236px;
+	height: 62px;
+	margin-left: 282px !important;
+	margin-top: 10px;
+	border-radius: 5px;
+	background-image: url('../images/login-button.gif');
 	background-repeat: no-repeat;
 	background-color: transparent;
 	border: 0;

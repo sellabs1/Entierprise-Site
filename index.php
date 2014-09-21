@@ -25,7 +25,7 @@
 			<form method="post" action="index.php">
 				<input type="text" name="username" placeholder="Username"/><br>
 				<input type="password" name="password" placeholder="Password"/><br>
-				<input type="submit" value="Submit" id="button" name="submit"/>
+				<input type="submit" value="Submit" id="login-button" name="submit"/>
 			</form>
 			<br>
 			<a href="register.php">Register Here</a>
