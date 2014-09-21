@@ -40,7 +40,7 @@
 		</ul>
 
 		<form method="POST" action="userHome.php">
-			<input type="submit" class="logout-button" value="Logout" name="logout">
+			<input type="submit" class="logout-button" name="logout">
 		</form>
 	</div>
 		<div id="title"><h1><?php echo "Welcome ".$_SESSION['username']; ?></h1></div>
