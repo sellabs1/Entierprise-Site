@@ -11,21 +11,32 @@ function deleteRecord(id){
 }
 
 $(document).ready(function(){
-	//Tests to see whether the username exists in the database
+	
+	var passFlag = 0;
+	var userFlag = 0;
+
 	$("#regUsername").keyup(function (e) { //user types username on inputfiled
 
    		var username = $(this).val(); //get the string typed by user
+   		var button = $('#button');
 
    		$.post('usernameCheck.php', {'username':username}, function(data) { //make ajax call to usernameCheck.php
   			if(data == "1"){
   				$("#user-result").html("<img src='../images/userExists.gif' />").fadeIn();
-  				$('#button').prop('disabled', true);
+  				userFlag = 0;
   			}
   			else{
   				$("#user-result").html("<img src='../images/userAvailable.gif' />").fadeIn();
-  				$('#button').prop('disabled', false);
+  				userFlag = 1;
   			} 
    		});
+
+   		if(userFlag == 1 && passFlag == 1){
+   			button.prop('disabled', false);
+   		}
+   		else{
+   			button.prop('disabled', true);
+   		}
 	});
 
 	//Tests to see whether the user has input the same passwords for registering
@@ -37,12 +48,19 @@ $(document).ready(function(){
 
 		if(pass != confPass){
 			$("#pass-result").html("<img src='../images/passMatch.gif' />").fadeIn();
-			button.prop('disabled', true);
+			passFlag = 0;
 		}
 		else{
 			$("#pass-result").html("").fadeIn();
-			button.prop('disabled', false);
-		}
+			passFlag = 1;
+		};
+
+		if(userFlag == 1 && passFlag == 1){
+   			button.prop('disabled', false);
+   		}
+   		else{
+   			button.prop('disabled', true);
+   		}
 	});
 })
 
