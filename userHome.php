@@ -33,7 +33,7 @@
 
 	<div id ="nav">
 		<ul>
-			<li id="start-game"><a href="serverBrowse.php">Game</a></li>
+			<li id="start-game"><a href="serverBrowse.php"></a></li>
 			<li id="help"><a href="help.php">Help</a></li>
 			<li id="settings"><a href="settings.php">Settings</a></li>
 			<li id="tutorial"><a href="tutorial.php">Tutorial</a></li>
