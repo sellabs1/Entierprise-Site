@@ -170,6 +170,9 @@ h2
 	float: right;
 	margin-top: 220px;
 	margin-right: 150px;
+	background-image: url('../images/main-menu-screen.gif');
+	background-size: cover;
+	background-position: center;
 }
 
 #welcome
