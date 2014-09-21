@@ -32,7 +32,7 @@ td:first-child
 	font-size: 20px;
 }
 
-#server-table td, th
+#server-table td
 {
 	width: 20%;
 	height: 30px !important;
