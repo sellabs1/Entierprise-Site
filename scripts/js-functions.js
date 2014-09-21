@@ -51,7 +51,7 @@ $(document).ready(function(){
 			passFlag = 0;
 		}
 		else{
-			$("#pass-result").html("").fadeIn();
+			$("#pass-result").html("");
 			passFlag = 1;
 		};
 
