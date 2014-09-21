@@ -26,4 +26,14 @@ td:first-child
 	margin-top: 40px;
 }
 
-#server-table
+#server-table #server-headers
+{
+	font-family: Mont-Bold;
+	font-size: 20px;
+}
+
+#server-table td
+{
+	width: 20%;
+	
+}

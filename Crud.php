@@ -15,6 +15,11 @@ class Crud{
 		$this->db = $this->db->dbConnect();
 	}
 	
+	public function serverPlayers($id){
+		$query = $this->db->prepare("SELECT * FROM ");
+		$query->execute();
+	}
+
 	//showTable function. Grabs all rows from the table that is passed to it.
 	public function showTable($table){
 
@@ -142,10 +147,11 @@ class Crud{
 
 				echo "<table id='server-table'>";
 
-					echo "<tr id=''>";
-						echo "<th>".$cols['ServerName']."</th>";
-						echo "<th>".$cols['Location']."</th>";
-						echo "<th>".$cols['CurrentStatus']."</th>";
+					echo "<tr id='server-headers'>";
+						echo "<th>Server Name</th>";
+						echo "<th>Location</th>";
+						echo "<th>Players</th>";
+						echo "<th>Current Status</th>";
 						echo "<th>Select</th>";
 					echo "</tr>";
 
@@ -154,6 +160,7 @@ class Crud{
 							echo "<form id='server-form' method='POST' action='game.php'>";
 								echo "<td>".$row['ServerName']."</td>";
 								echo "<td>".$row['Location']."</td>";
+								echo "<td></td>";
 								echo "<td>".$row['CurrentStatus']."</td>";
 								echo "<input type='hidden' name='serverAddress' value='".$row['ServerAddress']."'>";
 								echo "<input type='hidden' name='serverPort' value='".$row['ServerPort']."'>";
