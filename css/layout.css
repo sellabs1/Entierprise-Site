@@ -3,7 +3,7 @@
 	width: 1400px;
 	height: 900px;
 	margin: 0 auto;
-	margin-top: 100px;
+	margin-top: 70px;
 	background-image: url('../images/background.gif');
 	position: relative;
 	border: 3px solid #434A54;
@@ -52,6 +52,7 @@
 
 #form-container
 {
+	font-family: Mont-Bold;
 	width: 500px;
 	margin: 0 auto;
 	margin-top: 200px;
@@ -124,6 +125,24 @@ textarea
 	width: 150px;
 	margin: 5px;
 	display: inline-block;
+}
+
+@font-face
+{
+	font-family: Mont-Bold;
+	src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face
+{
+	font-family: Mont-Reg;
+	src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face
+{
+	font-family: Laika;
+	src: url('../fonts/LAIKA.otf') format('opentype');
 }
 
 /*
