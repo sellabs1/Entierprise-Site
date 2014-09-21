@@ -44,10 +44,10 @@
 
 			<div id="server-back">
 				<form id="back-form" method="POST" action="#">
-					<input type="submit" value="Back" name="Back">
+					<input type="submit" value=" " name="Back">
 				</form>
 			</div>
-			
+
 		</div>
 
 	</div>
