@@ -33,6 +33,11 @@
 	font-size: 20px;
 }
 
+#server-table tr
+{
+	border-bottom: 1px solid black;
+}
+
 #server-table td
 {
 	width: 20%;
