@@ -26,6 +26,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/table.css">
 	<title>Entierprise - Server Browse</title>
 </head>
 <body>
@@ -33,15 +34,18 @@
 	<div id="container">
 
 		<div id="serverList">
+
 			<?php
 
 				$crud = new Crud();
 				$crud->getServers();
 
 			?>
+
 			<form id="back-form" method="POST" action="#">
 				<input type="submit" value="Back" name="Back">
 			</form>
+
 		</div>
 
 	</div>
