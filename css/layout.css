@@ -120,12 +120,17 @@ textarea
 {
 	float: left;
 	height: auto;
-	width: 200px;
+	width: 240px;
 	position: absolute;
 	margin-top: 200px;
 	margin-left: 50px;
 	border: 1px solid black;
 	overflow: hidden;
+}
+
+#start-game
+{
+	background-image: url('../images/menu-start.gif');
 }
 
 #nav ul

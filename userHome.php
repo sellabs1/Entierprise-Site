@@ -30,14 +30,13 @@
 <body>
 
 	<div id="container">
-	<h1>User Home Page</h1>
-	
+
 	<div id ="nav">
 		<ul>
-			<li><a href="serverBrowse.php">Game</a></li>
-			<li><a href="help.php">Help</a></li>
-			<li><a href="settings.php">Settings</a></li>
-			<li><a href="tutorial.php">Tutorial</a></li>
+			<li id="start-game"><a href="serverBrowse.php">Game</a></li>
+			<li id="help"><a href="help.php">Help</a></li>
+			<li id="settings"><a href="settings.php">Settings</a></li>
+			<li id="tutorial"><a href="tutorial.php">Tutorial</a></li>
 		</ul>
 
 		<form method="POST" action="userHome.php">
