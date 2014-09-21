@@ -168,7 +168,7 @@ h2
 	height: 457px;
 	position: absolute;
 	margin-top: 220px;
-	margin-left: 400px;
+	margin-left: 430px;
 	background-image: url('../images/main-menu-screen.gif');
 	background-size: cover;
 	background-position: center;
@@ -179,12 +179,22 @@ h2
 	font-family: Mont-Bold;
 }
 
-#edit-container, #serverList
+#edit-container
 {
 	width: 500px;
 	height: 500px;
 	margin: 0 auto;
 	margin-top: 200px;
+}
+
+#serverList
+{
+	width: 1048px;
+	height: 574px;
+	margin: 0 auto;
+	margin-top: 250px;
+	background-image: url('../images/server-screen.gif');
+
 }
 
 textarea

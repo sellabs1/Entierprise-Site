@@ -32,8 +32,6 @@
 
 	<div id="container">
 
-		<h1>Server Browse Page</h1>
-
 		<div id="serverList">
 			<?php
 

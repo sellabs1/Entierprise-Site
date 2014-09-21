@@ -140,9 +140,9 @@ class Crud{
 			
 			if($result){
 
-				echo "<table>";
+				echo "<table id='server-table'>";
 
-					echo "<tr>";
+					echo "<tr id=''>";
 						echo "<th>".$cols['ServerName']."</th>";
 						echo "<th>".$cols['Location']."</th>";
 						echo "<th>".$cols['CurrentStatus']."</th>";
