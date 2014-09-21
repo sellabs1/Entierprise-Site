@@ -18,12 +18,17 @@
 	font-weight: bold;
 }
 
+#server-table td
+{
+	font-family: Mont-Regular;
+}
+
 #server-table
 {
 	width: 800px;
-	height: 550px;
+	height: 540px;
 	margin: 0 auto;
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 #server-headers
