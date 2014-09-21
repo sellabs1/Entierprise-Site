@@ -15,10 +15,6 @@
     	header('location: index.php');
 	}
 
-	if($_SESSION['login'] == 'true') {
-    	echo 'Username: <b>'.$_SESSION['username'].'</b>';
-	}
-
 	if(isset($_POST['logout'])){
 
 		$object = new User();
