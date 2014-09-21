@@ -97,6 +97,7 @@ h2
 	padding: 0px !important;
 	background-color: transparent;
 	border: 0;
+	display: list-item;
 	-webkit-appearance: none;
 }
 
