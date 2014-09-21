@@ -107,7 +107,9 @@ h2
 	margin-left: 282px !important;
 	margin-top: 10px;
 	border-radius: 5px;
-	background-image: url('../images/register-register-button.gif') center no-repeat;
+	background-image: url('../images/register-register-button.gif');
+	background-repeat: no-repeat;
+	background-position: center;
 	-webkit-appearance: none;
 	cursor: pointer;
 }

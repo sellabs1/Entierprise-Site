@@ -35,7 +35,7 @@
 				<input id="confPass" type="password" name="confPassword" placeholder="Confirm Password" required/>
 				<span id="pass-result"></span><br>
 				<input type="text" name="email" placeholder="Email" required/><br>
-				<input type="submit" value="Submit" id="reg-button" name="submitReg"/>
+				<input type="submit" value=" " id="reg-button" name="submitReg"/>
 			</form>
 		</div>
 	</div>
