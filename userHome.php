@@ -29,6 +29,9 @@
 </head>
 <body>
 
+	<div id="container">
+	<h1>User Home Page</h1>
+	
 	<div id ="nav">
 		<ul>
 			<li><a href="serverBrowse.php">Game</a></li>
@@ -41,9 +44,6 @@
 			<input type="submit" class="button" value="Logout" name="logout">
 		</form>
 	</div>
-
-	<div id="container">
-	<h1>User Home Page</h1>
 		<div id="title"><h1><?php echo "Welcome ".$_SESSION['username']; ?></h1></div>
 
 	</div>
