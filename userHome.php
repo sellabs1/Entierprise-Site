@@ -31,22 +31,19 @@
 
 	<div id="container">
 
-	<div id="list-test"><img src="images/menu-start.gif"></div>
-
 	<div id ="nav">
 		<ul>
 			<li id="menu-start-game"><a href="serverBrowse.php"></a></li>
-			<li id="menu-help"><a href="help.php">Help</a></li>
-			<li id="menu-settings"><a href="settings.php">Settings</a></li>
-			<li id="menu-tutorial"><a href="tutorial.php">Tutorial</a></li>
+			<li id="menu-tutorial"><a href="tutorial.php"></a></li>
+			<li id="menu-help"><a href="help.php"></a></li>
+			<li id="menu-settings"><a href="settings.php"></a></li>
 		</ul>
 
 		<form method="POST" action="userHome.php">
-			<input type="submit" class="button" value="Logout" name="logout">
+			<input type="submit" class="logout-button" value="Logout" name="logout">
 		</form>
 	</div>
 		<div id="title"><h1><?php echo "Welcome ".$_SESSION['username']; ?></h1></div>
-
 	</div>
 </body>
 </html>
