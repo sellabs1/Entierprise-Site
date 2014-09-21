@@ -128,7 +128,7 @@ textarea
 	overflow: hidden;
 }
 
-#start-game
+#nav #start-game
 {
 	background-image: url('../images/menu-start.gif');
 }
@@ -146,7 +146,7 @@ textarea
 	width: 100%;
 	border-top: 1px solid black;
 	padding: 3px;
-	display: block;
+	display: list-item;
 	line-height: 53px;
 	text-indent: 40px;
 	font-size: 20px;
