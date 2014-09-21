@@ -26,23 +26,22 @@
 
 <body>
 
-	<div id ="nav">
-		<ul>
-			<li><a href="game.php">Game</a></li>
-			<li><a href="settings.php">Settings</a></li>
-			<li><a href="tutorial.php">Tutorial</a></li>
-			<li><a href="userHome.php">Home</a></li>
-		</ul>
+	<div id="container">
 
-		<form method="POST" action="userHome.php">
-			<input type="submit" class="button" value="Logout" name="logout">
-		</form>
-	</div>
+		<div id ="nav">
 
-	<div id ="container">
-
-		<h1>Help Page</h1>
-
+			<form method="POST" action="userHome.php">
+			<ul>
+				<li id="menu-start-game"><a href="serverBrowse.php"></a></li>
+				<li id="menu-tutorial"><a href="tutorial.php"></a></li>
+				<li id="menu-settings"><a href="settings.php"></a></li>
+				<li id="menu-exit"><input type="submit" class="logout-button" value="" name="logout"></li>
+			</ul>
+			</form>
+				
+		</div>
+	
+		<div id="title"><h1><?php echo "Welcome ".$_SESSION['username']; ?></h1></div>
 	</div>
 
 </body>
