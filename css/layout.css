@@ -191,10 +191,11 @@ h2
 {
 	width: 1048px;
 	height: 574px;
-	margin: 0 auto;
-	margin-top: 250px;
+	left: 0;
+	right: 0;
+	margin-top: 210px;
 	background-image: url('../images/server-screen.gif');
-
+	position: absolute;
 }
 
 textarea
