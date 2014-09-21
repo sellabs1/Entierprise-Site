@@ -133,8 +133,8 @@ textarea
 	height: auto;
 	width: 240px;
 	position: absolute;
-	margin-top: 200px;
-	margin-left: 50px;
+	margin-top: 250px;
+	margin-left: 100px;
 	border: none;
 	overflow: hidden;
 }
@@ -181,6 +181,7 @@ textarea
 	line-height: 53px;
 	text-indent: 40px;
 	font-size: 20px;
+	margin-bottom: 10px;
 }
 
 #nav a
