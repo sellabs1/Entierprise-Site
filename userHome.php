@@ -31,6 +31,8 @@
 
 	<div id="container">
 
+	<div id="list-test"><img src="images/menu-start.gif"></div>
+
 	<div id ="nav">
 		<ul>
 			<li id="start-game"><a href="serverBrowse.php"></a></li>
@@ -38,8 +40,6 @@
 			<li id="settings"><a href="settings.php">Settings</a></li>
 			<li id="tutorial"><a href="tutorial.php">Tutorial</a></li>
 		</ul>
-
-		<div id="list-test"><img src="images/menu-start.gif"></div>
 
 		<form method="POST" action="userHome.php">
 			<input type="submit" class="button" value="Logout" name="logout">
