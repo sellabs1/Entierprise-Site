@@ -83,17 +83,13 @@
 
 #user-result, #pass-result
 {
-	position: fixed;
+	position: absolute;
+	display: inline-block;
 }
 
 #user-result
 {
-	margin-top: 50px;
-}
-
-#pass-result
-{
-	margin-bottom: 200px;
+	margin-top: 140px;
 }
 
 h2
