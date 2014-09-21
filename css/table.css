@@ -17,3 +17,13 @@ td:first-child
 {
 	font-weight: bold;
 }
+
+#server-table
+{
+	width: 800px;
+	height: 550px;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+#server-table

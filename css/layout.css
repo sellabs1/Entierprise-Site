@@ -9,6 +9,16 @@
 	border: 3px solid #434A54;
 }
 
+#game-container
+{
+	width: 1400px;
+	height: 900px;
+	margin: 0 auto;
+	margin-top: 70px;
+	position: relative;
+	border: 3px solid #434A54;
+}
+
 #admin-display-container
 {
 	width: 1000px;
@@ -192,7 +202,7 @@ h2
 	width: 1048px;
 	height: 574px;
 	left: 180px;
-	margin-top: 210px;
+	margin-top: 220px;
 	background-image: url('../images/server-screen.gif');
 	position: absolute;
 }
