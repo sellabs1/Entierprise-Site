@@ -128,9 +128,24 @@ textarea
 	overflow: hidden;
 }
 
-#nav #start-game
+#nav #menu-start-game
 {
 	background-image: url('../images/menu-start.gif');
+}
+
+#nav #menu-help
+{
+	background-image: url('../images/menu-help.gif');
+}
+
+#nav #menu-settings
+{
+	background-image: url('../images/menu-settings.gif');
+}
+
+#nav #menu-tutorial
+{
+	background-image: url('../images/menu-tutorial.gif');
 }
 
 #nav ul

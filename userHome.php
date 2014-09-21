@@ -35,10 +35,10 @@
 
 	<div id ="nav">
 		<ul>
-			<li id="start-game"><a href="serverBrowse.php"></a></li>
-			<li id="help"><a href="help.php">Help</a></li>
-			<li id="settings"><a href="settings.php">Settings</a></li>
-			<li id="tutorial"><a href="tutorial.php">Tutorial</a></li>
+			<li id="menu-start-game"><a href="serverBrowse.php"></a></li>
+			<li id="menu-help"><a href="help.php">Help</a></li>
+			<li id="menu-settings"><a href="settings.php">Settings</a></li>
+			<li id="menu-tutorial"><a href="tutorial.php">Tutorial</a></li>
 		</ul>
 
 		<form method="POST" action="userHome.php">
