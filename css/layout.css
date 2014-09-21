@@ -52,7 +52,9 @@
 
 #back-link
 {
-	margin-bottom: 25px;
+	bottom: 60px;
+	margin-left: 120px;
+	position: relative;
 }
 
 #register-form
