@@ -16,8 +16,10 @@ class Crud{
 	}
 	
 	public function serverPlayers($id){
-		$query = $this->db->prepare("SELECT * FROM ");
+		$query = $this->db->prepare("SELECT COUNT(*) FROM UserServer WHERE ServerId = $id GROUP BY ServerId");
 		$query->execute();
+
+		return $query->fetch();
 	}
 
 	//showTable function. Grabs all rows from the table that is passed to it.
@@ -160,7 +162,7 @@ class Crud{
 							echo "<form id='server-form' method='POST' action='game.php'>";
 								echo "<td>".$row['ServerName']."</td>";
 								echo "<td>".$row['Location']."</td>";
-								echo "<td></td>";
+								echo "<td>".$this->serverPlayers($row['ServerId'])."</td>";
 								echo "<td>".$row['CurrentStatus']."</td>";
 								echo "<input type='hidden' name='serverAddress' value='".$row['ServerAddress']."'>";
 								echo "<input type='hidden' name='serverPort' value='".$row['ServerPort']."'>";
