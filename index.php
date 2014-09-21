@@ -21,8 +21,7 @@
 
 <body>
 	<div id="container">
-		<div id="form-container">
-			<h2>Login</h2>
+		<div id="login-form" class="form-container">
 			<form method="post" action="index.php">
 				<input type="text" name="username" placeholder="Username"/><br>
 				<input type="password" name="password" placeholder="Password"/><br>
