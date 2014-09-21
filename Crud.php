@@ -19,7 +19,7 @@ class Crud{
 		$query = $this->db->prepare("SELECT COUNT(*) FROM UserServer WHERE ServerId = $id GROUP BY ServerId");
 		$query->execute();
 
-		return $query->fetch();
+		return $query->fetchColumn();
 	}
 
 	//showTable function. Grabs all rows from the table that is passed to it.
