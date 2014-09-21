@@ -37,6 +37,7 @@
 				<input type="text" name="email" placeholder="Email" required/><br>
 				<input type="submit" value=" " id="reg-button" name="submitReg"/>
 			</form>
+			<a href="index.php">Back</a>
 		</div>
 	</div>
 </body>
