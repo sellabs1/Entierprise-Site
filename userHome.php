@@ -38,7 +38,7 @@
 			<li id="menu-tutorial"><a href="tutorial.php"></a></li>
 			<li id="menu-help"><a href="help.php"></a></li>
 			<li id="menu-settings"><a href="settings.php"></a></li>
-			<li><input type="submit" class="logout-button" value=" " name="logout"></li>
+			<li id="menu-exit"><input type="submit" class="logout-button" value="" name="logout"></li>
 		</ul>
 		</form>
 			
