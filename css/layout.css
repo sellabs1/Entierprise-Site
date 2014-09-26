@@ -204,6 +204,8 @@ h2
 	left: 180px;
 	margin-top: 220px;
 	background-image: url('../images/server-screen.png');
+	background-size: cover;
+	background-position: center;
 	position: absolute;
 }
 
