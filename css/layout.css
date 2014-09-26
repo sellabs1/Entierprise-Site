@@ -282,27 +282,27 @@ textarea
 
 #nav #menu-start-game
 {
-	background-image: url('../images/menu-start.gif');
+	background-image: url('../images/menu-start.png');
 }
 
 #nav #menu-help
 {
-	background-image: url('../images/menu-help.gif');
+	background-image: url('../images/menu-help.png');
 }
 
 #nav #menu-settings
 {
-	background-image: url('../images/menu-setting.gif');
+	background-image: url('../images/menu-setting.png');
 }
 
 #nav #menu-tutorial
 {
-	background-image: url('../images/menu-tutorial.gif');
+	background-image: url('../images/menu-tutorial.png');
 }
 
 #nav #menu-exit
 {
-	background-image: url('../images/menu-exit.gif');
+	background-image: url('../images/menu-exit.png');
 }
 
 #nav ul
