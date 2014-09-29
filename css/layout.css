@@ -282,6 +282,11 @@ textarea
 	overflow: hidden;
 }
 
+#nav li
+{
+	background-repeat: no-repeat;
+}
+
 #nav #menu-start-game
 {
 	background-image: url('../images/menu-start.png');
