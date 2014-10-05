@@ -232,7 +232,7 @@ h2
 	cursor: pointer;
 }
 
-.server-submit
+#server-form input[type="submit"]
 {
 	width: 100%;
 	height: 100%;
