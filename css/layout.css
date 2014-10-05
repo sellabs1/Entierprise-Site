@@ -230,7 +230,24 @@ h2
 	background-color: transparent;
 	-webkit-appearance: none;
 	cursor: pointer;
+}
 
+.server-submit
+{
+	width: 236px;
+	height: 62px;
+	margin-left: 282px !important;
+	margin-top: 30px;
+	border-radius: 5px;
+	background-image: url('../images/game-join-button.png');
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: 0;
+	background-position: center;
+	background-size: cover;
+	-webkit-appearance: none;
+	cursor: pointer;
+	display: block;
 }
 
 textarea
@@ -372,3 +389,4 @@ iframe
 	margin-top: 200px;
 	margin: 0 auto;
 }
+
