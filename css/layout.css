@@ -359,8 +359,9 @@ textarea
 
 iframe
 {
-	 width: 1400px; 
-	 height: 900px;
+	border: none;
+	width: 1400px; 
+	height: 900px;
 }
 
 #list-test
