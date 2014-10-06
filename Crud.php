@@ -169,19 +169,6 @@ class Crud{
 								echo "<input type='hidden' name='serverAddress' value='".$row['ServerAddress']."'>";
 								echo "<input type='hidden' name='serverPort' value='".$row['ServerPort']."'>";
 
-								echo "<td><input type='submit' name='server-submit' value='Join'></td>";
-							echo "</form>";
-						echo "</tr>";
-
-						echo "<tr>";
-							echo "<form id='server-form' method='POST' action='game.php'>";
-								echo "<td>".$row['ServerName']."</td>";
-								echo "<td>".$row['Location']."</td>";
-								echo "<td>".$this->serverPlayers($row['ServerId'])."/5</td>";
-								echo "<td>".$row['CurrentStatus']."</td>";
-								echo "<input type='hidden' name='serverAddress' value='".$row['ServerAddress']."'>";
-								echo "<input type='hidden' name='serverPort' value='".$row['ServerPort']."'>";
-
 								echo "<td><input type='submit' class='server-submit' name='server-submit' value=''></td>";
 							echo "</form>";
 						echo "</tr>";
