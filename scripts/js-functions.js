@@ -1,3 +1,4 @@
+//Function that submits the form when the dropdown option is selected
 function change(){
 	document.getElementById("select-table-form").submit();
 }

@@ -43,9 +43,15 @@
 			?>
 
 			<div id="server-back">
+				
 				<form id="back-form" method="POST" action="#">
 					<input type="submit" value=" " name="Back">
 				</form>
+
+				<form id="refresh-form" method="POST" action="#">
+					<input type="button" value=" " name="Refresh" onclick="window.location.reload();">
+				</form>
+				
 			</div>
 
 		</div>
