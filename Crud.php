@@ -145,10 +145,13 @@ class Crud{
 		try{
 			$result = $this->showTableAssoc('Server');
 			$cols = $this->getColumns('Server');
-			$numPlayers = 0;
+			$numPlayers = $this->serverPlayers($row['ServerId']);
 			
-			if($this->serverPlayers($row['ServerId']) != 0){
+			if($numPlayers){
 				$numPlayers = $this->serverPlayers($row['ServerId']);
+			}
+			else{
+				$numPlayers = 0;
 			}
 			
 			if($result){
