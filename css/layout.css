@@ -4,7 +4,7 @@
 	height: 900px;
 	margin: 0 auto;
 	margin-top: 70px;
-	background-image: url('../images/background.gif');
+	background-image: url('../images/background.png');
 	position: relative;
 	border: 3px solid #434A54;
 }
@@ -64,12 +64,12 @@
 
 #register-form
 {
-	background-image: url('../images/register-form-1.gif');
+	background-image: url('../images/register-screen.png');
 }
 
 #login-form
 {
-	background-image: url('../images/login-form.gif');
+	background-image: url('../images/login-form.png');
 }
 
 .form-container
@@ -130,7 +130,7 @@ h2
 	margin-left: 282px !important;
 	margin-top: 30px;
 	border-radius: 5px;
-	background-image: url('../images/register-register-button.gif');
+	background-image: url('../images/register-register-button.png');
 	background-repeat: no-repeat;
 	background-color: transparent;
 	border: 0;
@@ -148,7 +148,7 @@ h2
 	margin-left: 282px !important;
 	margin-top: 20px;
 	border-radius: 5px;
-	background-image: url('../images/login-button.gif');
+	background-image: url('../images/login-button.png');
 	background-repeat: no-repeat;
 	background-color: transparent;
 	border: 0;
@@ -179,7 +179,7 @@ h2
 	position: absolute;
 	margin-top: 220px;
 	margin-left: 430px;
-	background-image: url('../images/main-menu-screen.gif');
+	background-image: url('../images/main-menu-screen.png');
 	background-size: cover;
 	background-position: center;
 }
@@ -203,7 +203,9 @@ h2
 	height: 574px;
 	left: 180px;
 	margin-top: 220px;
-	background-image: url('../images/server-screen.gif');
+	background-image: url('../images/server-screen.png');
+	background-size: cover;
+	background-position: center;
 	position: absolute;
 }
 
@@ -220,7 +222,7 @@ h2
 {
 	width: 100%;
 	height: 100%;
-	background-image: url('../images/tutorial-back-button.gif');
+	background-image: url('../images/back-button.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -228,7 +230,20 @@ h2
 	background-color: transparent;
 	-webkit-appearance: none;
 	cursor: pointer;
+}
 
+.server-submit
+{
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/server-join-button.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 0;
+	background-color: transparent;
+	-webkit-appearance: none;
+	cursor: pointer;
 }
 
 textarea
@@ -280,29 +295,34 @@ textarea
 	overflow: hidden;
 }
 
+#nav li
+{
+	background-repeat: no-repeat;
+}
+
 #nav #menu-start-game
 {
-	background-image: url('../images/menu-start.gif');
+	background-image: url('../images/menu-start.png');
 }
 
 #nav #menu-help
 {
-	background-image: url('../images/menu-help.gif');
+	background-image: url('../images/menu-help.png');
 }
 
 #nav #menu-settings
 {
-	background-image: url('../images/menu-setting.gif');
+	background-image: url('../images/menu-setting.png');
 }
 
 #nav #menu-tutorial
 {
-	background-image: url('../images/menu-tutorial.gif');
+	background-image: url('../images/menu-tutorial.png');
 }
 
 #nav #menu-exit
 {
-	background-image: url('../images/menu-exit.gif');
+	background-image: url('../images/menu-exit.png');
 }
 
 #nav ul
@@ -352,8 +372,9 @@ textarea
 
 iframe
 {
-	 width: 1400px; 
-	 height: 900px;
+	border: none;
+	width: 1400px; 
+	height: 900px;
 }
 
 #list-test
@@ -364,3 +385,4 @@ iframe
 	margin-top: 200px;
 	margin: 0 auto;
 }
+
