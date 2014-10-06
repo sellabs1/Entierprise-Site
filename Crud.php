@@ -145,6 +145,11 @@ class Crud{
 		try{
 			$result = $this->showTableAssoc('Server');
 			$cols = $this->getColumns('Server');
+			$numPlayers = 0;
+			
+			if($this->serverPlayers($row['ServerId']) != 0){
+				$numPlayers = $this->serverPlayers($row['ServerId']);
+			}
 			
 			if($result){
 
@@ -164,7 +169,7 @@ class Crud{
 							echo "<form id='server-form' method='POST' action='game.php'>";
 								echo "<td>".$row['ServerName']."</td>";
 								echo "<td>".$row['Location']."</td>";
-								echo "<td>".$this->serverPlayers($row['ServerId'])."/5</td>";
+								echo "<td>".$numPLayers."/5</td>";
 								echo "<td>".$row['CurrentStatus']."</td>";
 								echo "<input type='hidden' name='serverAddress' value='".$row['ServerAddress']."'>";
 								echo "<input type='hidden' name='serverPort' value='".$row['ServerPort']."'>";
