@@ -50,11 +50,10 @@
 				
 			</div>
 
+			<form id="refresh-form" method="POST" action="#">
+				<input type="button" value=" " name="Refresh" onclick="window.location.reload();">
+			</form>
 		</div>
-
-		<form id="refresh-form" method="POST" action="#">
-			<input type="button" value=" " name="Refresh" onclick="window.location.reload();">
-		</form>
 
 	</div>
 </body>
