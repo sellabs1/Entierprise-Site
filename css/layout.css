@@ -209,16 +209,30 @@ h2
 	position: absolute;
 }
 
-#server-back
+#server-back, #refresh-form
 {
 	width: 131px;
 	height: 45px;
 	position: absolute;
-	right: 100px;
+	left: 100px;
 	bottom: 20px;
 }
 
 #server-back input[type="submit"]
+{
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/back-button.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 0;
+	background-color: transparent;
+	-webkit-appearance: none;
+	cursor: pointer;
+}
+
+#refresh-form input[type="button"]
 {
 	width: 100%;
 	height: 100%;
