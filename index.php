@@ -28,8 +28,8 @@
 				<input type="submit" value=" " id="login-button" name="submit"/>
 			</form>
 			<br>
-			<a id="register-link" href="register.php">Register Here</a>
 		</div>
+		<a id="register-link" href="register.php">Register Here</a>
 	</div>
 </body>
 
