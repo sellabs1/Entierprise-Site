@@ -151,7 +151,7 @@ class Crud{
 				$numPlayers = $this->serverPlayers($row['ServerId']);
 			}
 			else{
-				$numPlayers = 0;
+				$numPlayers = '0';
 			}
 			
 			if($result){
