@@ -106,7 +106,7 @@ class User{
 
 			if($result){
 				echo("<script>alert('Success. You have been registered');</script>");
-				echo("<script>setTimeout(\"location.href = 'index.php';\",500);</script>");
+				$this->Login($username, $password);
 			}
 			else{
 				echo("There has been a problem. Please try again");

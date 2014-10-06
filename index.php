@@ -1,4 +1,5 @@
 <?php
+	
 	include_once('user.php');
 
 	if(isset($_POST['submit'])){
@@ -11,7 +12,6 @@
 	}
 
 ?>
-
 <html>
 
 <head>
