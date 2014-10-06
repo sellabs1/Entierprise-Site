@@ -209,7 +209,16 @@ h2
 	position: absolute;
 }
 
-#server-back, #refresh-form
+#server-back
+{
+	width: 131px;
+	height: 45px;
+	position: absolute;
+	right: 100px;
+	bottom: 20px;
+}
+
+#refresh-form
 {
 	width: 131px;
 	height: 45px;
