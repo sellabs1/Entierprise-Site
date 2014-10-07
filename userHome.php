@@ -31,6 +31,8 @@
 
 	<div id="container">
 
+		<div id="name-cloud"></div>
+
 		<div id ="nav">
 
 			<form method="POST" action="userHome.php">
