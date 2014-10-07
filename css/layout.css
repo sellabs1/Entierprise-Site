@@ -54,9 +54,11 @@
 {
 	position: absolute;
 	height: 200px;
-	width: 420px;
-	right: 440px;
-	top: 50px;
+	width: 400px;
+	right: 0px;
+	top: 15px;
+	text-align: center;
+	font-family: Mont-Bold;
 }
 
 #register-link, #back-link
@@ -186,11 +188,6 @@ h2
 	background-image: url('../images/main-menu-screen.png');
 	background-size: cover;
 	background-position: center;
-}
-
-#welcome
-{
-	font-family: Mont-Bold;
 }
 
 #edit-container
