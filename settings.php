@@ -46,7 +46,6 @@
 				
 		</div>
 	
-		<div id="title"><h1><?php echo "Welcome ".$_SESSION['username']; ?></h1></div>
 	</div>
 
 </body>
