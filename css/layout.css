@@ -241,7 +241,7 @@ h2
 	cursor: pointer;
 }
 
-input[type="button"]:hover, input[type="submit"]:hover
+input[type="button"]:hover, input[type="submit"]:hover, #nav li:hover
 {
 	-webkit-transform: scale(1.1,1.1);
 	transition: .2s;

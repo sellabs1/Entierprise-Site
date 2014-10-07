@@ -27,6 +27,8 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/table.css">
+	<script src="scripts/jquery-1.11.1.min.js"></script>
+	<script src="scripts/js-functions.js"></script>
 	<title>Entierprise - Server Browse</title>
 </head>
 <body>
