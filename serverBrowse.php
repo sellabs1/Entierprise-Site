@@ -36,7 +36,7 @@
 	<div id="container">
 
 		<div id="name-cloud">
-			<div id="title"><h1 id='welcome'><?php echo "Welcome, ".$_SESSION['username']; ?></h1></div>
+			<div id="title"><h1 id='welcome'><?php echo "Hello, ".$_SESSION['username']; ?></h1></div>
 		</div>
 
 		<div id="serverList">

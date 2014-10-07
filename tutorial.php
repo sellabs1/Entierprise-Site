@@ -29,7 +29,9 @@
 
 	<div id="container">
 
-		<div id="name-cloud"></div>
+		<div id="name-cloud">
+			<div id="title"><h1 id='welcome'><?php echo "Hello, ".$_SESSION['username']; ?></h1></div>
+		</div>
 
 		<div id ="nav">
 
@@ -41,12 +43,11 @@
 					<li id="menu-exit"><input type="submit" class="logout-button" value="" name="logout"></li>
 				</ul>
 			</form>
-				
+						
 		</div>
-	
-		<div id="title"><h1><?php echo "Welcome ".$_SESSION['username']; ?></h1></div>
+		
 	</div>
-
+	
 </body>
 
 </html>
