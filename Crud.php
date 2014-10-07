@@ -15,6 +15,7 @@ class Crud{
 		$this->db = $this->db->dbConnect();
 	}
 	
+	//serverPlayers function. Gets a count of how many players are in a specified server
 	public function serverPlayers($id){
 		$query = $this->db->prepare("SELECT COUNT(*) FROM UserServer WHERE ServerId = ? GROUP BY ServerId");
 		$query->bindParam(1, $id);

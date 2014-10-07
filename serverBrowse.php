@@ -35,6 +35,8 @@
 
 	<div id="container">
 
+		<div id="name-cloud"></div>
+
 		<div id="serverList">
 
 			<?php

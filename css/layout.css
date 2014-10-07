@@ -43,7 +43,7 @@
 	width: 500px;
 }
 
-#image, #title
+#image
 {
 	margin: 0 auto;
 	width: 500px;
@@ -52,7 +52,11 @@
 
 #title
 {
-	margin-top: 50px;
+	position: absolute;
+	height: 200px;
+	width: 420px;
+	right: 440px;
+	top: 50px;
 }
 
 #register-link, #back-link
@@ -261,6 +265,17 @@ input[type="button"]:hover, input[type="submit"]:hover, #nav li:hover
 	cursor: pointer;
 }
 
+#name-cloud
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-image: url('../images/name-cloud.png');
+	background-position: center;
+	background-size: cover;
+
+}
+
 .server-submit
 {
 	width: 100%;
@@ -282,6 +297,8 @@ textarea
 	max-height: 120px;
 	padding: 5px;
 }
+
+
 
 #edit-container label
 {
