@@ -145,14 +145,6 @@ class Crud{
 		try{
 			$result = $this->showTableAssoc('Server');
 			$cols = $this->getColumns('Server');
-			$numPlayers = $this->serverPlayers($row['ServerId']);
-			
-			if($numPlayers){
-				$numPlayers = $this->serverPlayers($row['ServerId']);
-			}
-			else{
-				$numPlayers = 0;
-			}
 			
 			if($result){
 
@@ -168,6 +160,16 @@ class Crud{
 
 					foreach ($result as $row) {
 
+						//Gets the number of players currently in each server
+						$numPlayers = $this->serverPlayers($row['ServerId']);
+						
+						if($numPlayers){
+							$numPlayers = $this->serverPlayers($row['ServerId']);
+						}
+						else{
+							$numPlayers = 0;
+						}
+
 						echo "<tr>";
 							echo "<form id='server-form' method='POST' action='game.php'>";
 								echo "<td>".$row['ServerName']."</td>";
@@ -177,7 +179,13 @@ class Crud{
 								echo "<input type='hidden' name='serverAddress' value='".$row['ServerAddress']."'>";
 								echo "<input type='hidden' name='serverPort' value='".$row['ServerPort']."'>";
 
-								echo "<td><input type='submit' class='server-submit' name='server-submit' value=''></td>";
+								if (strtolower($row['CurrentStatus']) == "offline" || strtolower($row['CurrentStatus']) == "in game") {
+									echo "<td>Unavailable</td>";
+								}
+								else{
+									echo "<td><input type='submit' class='server-submit' name='server-submit' value=''></td>";
+								}
+								
 							echo "</form>";
 						echo "</tr>";
 					}
