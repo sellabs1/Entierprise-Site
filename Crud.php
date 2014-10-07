@@ -16,7 +16,8 @@ class Crud{
 	}
 	
 	public function serverPlayers($id){
-		$query = $this->db->prepare("SELECT COUNT(*) FROM UserServer WHERE ServerId = $id GROUP BY ServerId");
+		$query = $this->db->prepare("SELECT COUNT(*) FROM UserServer WHERE ServerId = ? GROUP BY ServerId");
+		$query->bindParam(1, $id);
 		$query->execute();
 
 		return $query->fetchColumn();
@@ -25,7 +26,8 @@ class Crud{
 	//showTable function. Grabs all rows from the table that is passed to it.
 	public function showTable($table){
 
-		$query = $this->db->prepare("SELECT * FROM $table");
+		$query = $this->db->prepare("SELECT * FROM ?");
+		$query->bindParam(1, $table);
 		$query->execute();
 
 		//Returns an indexed array
@@ -35,7 +37,8 @@ class Crud{
 	//showTableAssoc function. Returns associative array of passed in table.
 	public function showTableAssoc($table){
 
-		$query = $this->db->prepare("SELECT * FROM $table");
+		$query = $this->db->prepare("SELECT * FROM ?");
+		$query->bindParam(1, $table);
 		$query->execute();
 
 		//Returns an associative array
@@ -45,7 +48,8 @@ class Crud{
 	//getColumn	function. Grabs all column names from the table that is passed to it.
 	public function getColumns($table){
 
-		$query = $this->db->prepare("DESCRIBE $table");
+		$query = $this->db->prepare("DESCRIBE ?");
+		$query->bindParam($table);
 		$query->execute();
 
 		//Returns associative array of column names.	
@@ -117,7 +121,7 @@ class Crud{
 		$query->execute();
 	}
 
-	//delet row function.
+	//delete row function.
 	public function deleteRow($columns, $table, $id){
 
 		$rowId = $columns[0];
@@ -158,11 +162,12 @@ class Crud{
 						echo "<th>Select</th>";
 					echo "</tr>";
 
+					//Prints a table row for every server
 					foreach ($result as $row) {
 
 						//Gets the number of players currently in each server
 						$numPlayers = $this->serverPlayers($row['ServerId']);
-						
+						//If there are players in the server, assign that number to numPlayers
 						if($numPlayers){
 							$numPlayers = $this->serverPlayers($row['ServerId']);
 						}
@@ -179,6 +184,7 @@ class Crud{
 								echo "<input type='hidden' name='serverAddress' value='".$row['ServerAddress']."'>";
 								echo "<input type='hidden' name='serverPort' value='".$row['ServerPort']."'>";
 
+								//If the server is offline or in game, the join button will not be displayed
 								if (strtolower($row['CurrentStatus']) == "offline" || strtolower($row['CurrentStatus']) == "in game") {
 									echo "<td>Unavailable</td>";
 								}
