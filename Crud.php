@@ -26,8 +26,7 @@ class Crud{
 	//showTable function. Grabs all rows from the table that is passed to it.
 	public function showTable($table){
 
-		$query = $this->db->prepare("SELECT * FROM ?");
-		$query->bindParam(1, $table);
+		$query = $this->db->prepare("SELECT * FROM $table");
 		$query->execute();
 
 		//Returns an indexed array
@@ -37,8 +36,7 @@ class Crud{
 	//showTableAssoc function. Returns associative array of passed in table.
 	public function showTableAssoc($table){
 
-		$query = $this->db->prepare("SELECT * FROM ?");
-		$query->bindParam(1, $table);
+		$query = $this->db->prepare("SELECT * FROM $table");
 		$query->execute();
 
 		//Returns an associative array
@@ -48,8 +46,7 @@ class Crud{
 	//getColumn	function. Grabs all column names from the table that is passed to it.
 	public function getColumns($table){
 
-		$query = $this->db->prepare("DESCRIBE ?");
-		$query->bindParam($table);
+		$query = $this->db->prepare("DESCRIBE $table");
 		$query->execute();
 
 		//Returns associative array of column names.	
@@ -121,7 +118,7 @@ class Crud{
 		$query->execute();
 	}
 
-	//delete row function.
+	//delet row function.
 	public function deleteRow($columns, $table, $id){
 
 		$rowId = $columns[0];
