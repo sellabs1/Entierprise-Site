@@ -3,14 +3,6 @@ function change(){
 	document.getElementById("select-table-form").submit();
 }
 
-function deleteRecord(id){
-
-	var answer = confirm('Are you sure you want to delete this record?');
-	if(answer){
-		
-	}
-}
-
 $(document).ready(function(){
 	
 	var passFlag = 0;
@@ -23,11 +15,11 @@ $(document).ready(function(){
 
    		$.post('usernameCheck.php', {'username':username}, function(data) { //make ajax call to usernameCheck.php
   			if(data == "1"){
-  				$("#user-result").html("<img src='../images/userExists.gif' />").fadeIn();
+  				$("#user-result").html("<img src='../images/userExists.png' />").fadeIn();
   				userFlag = 0;
   			}
   			else{
-  				$("#user-result").html("<img src='../images/userAvailable.gif' />").fadeIn();
+  				$("#user-result").html("<img src='../images/userAvailable.png' />").fadeIn();
   				userFlag = 1;
   			} 
    		});
@@ -48,7 +40,7 @@ $(document).ready(function(){
 		var button = $('#reg-button');
 
 		if(pass != confPass){
-			$("#pass-result").html("<img src='../images/passMatch.gif' />").fadeIn();
+			$("#pass-result").html("<img src='../images/passMatch.png' />").fadeIn();
 			passFlag = 0;
 		}
 		else{

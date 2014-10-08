@@ -119,7 +119,7 @@ class Crud{
 		$query->execute();
 	}
 
-	//delet row function.
+	//delete row function.
 	public function deleteRow($columns, $table, $id){
 
 		$rowId = $columns[0];
