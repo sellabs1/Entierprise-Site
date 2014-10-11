@@ -86,6 +86,8 @@
 #back-link
 {
 	background: url('../images/back-button.png');
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 #register-form
