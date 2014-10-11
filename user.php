@@ -20,7 +20,7 @@ class User{
     		session_start();
 		}
 		
-		//Instantiates the connection class, and calls the dbConnect function
+		//Instantiates the connection class, and calls the dbConnect function from connection.php
 		$this->db = new Connection();
 		$this->db = $this->db->dbConnect();
 	}
@@ -61,15 +61,15 @@ class User{
 	    			}
 				}
 				else{
-					echo "Incorrect username or password </br>";
+					echo "<div id='login-popup'>Incorrect username or password</div>";
 				}
 			}
 			else{
-				echo "Incorrect username or password";
+				echo "<div id='login-popup'>Incorrect username or password</div>";
 			}
 		}
 		else{
-			echo "Please enter your username and password";
+			echo "<div id='login-popup'>Please enter your username and password</div>";
 		}
 	}
 
@@ -78,7 +78,6 @@ class User{
 
 		session_destroy();
 		header('location: index.php');
-		echo "You have been successfully logged out";
 	}
 
 	//Register function. Gets passed username, password, and email address from form input.
@@ -109,11 +108,11 @@ class User{
 				$this->Login($username, $password);
 			}
 			else{
-				echo("There has been a problem. Please try again");
+				echo("<div id='register-popup'>There has been a problem. Please try again</div>");
 			}
 		}
 		else{
-			echo "Please fill in all of the fields";
+			echo "<div id='register-popup'>Please fill in all of the fields</div>";
 		}
 	}
 }
