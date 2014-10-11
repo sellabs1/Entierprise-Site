@@ -27,7 +27,7 @@
 				<input type="text" name="email" placeholder="Email" required/><br>
 				<input type="submit" value=" " id="reg-button" name="submitReg"/>
 			</form>
-			<a id="back-link" href="index.php">Back</a>
+			<a id="back-link" href="index.php"></a>
 			
 			<?php
 				if(isset($_POST['submitReg'])){

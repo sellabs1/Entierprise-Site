@@ -63,14 +63,24 @@
 
 #register-link, #back-link
 {
-	bottom: 60px;
-	margin-left: 120px;
+	bottom: 19px;
+	left: 70px;
 	position: absolute;
+	width: 162px;
+	height: 45px;
+}
+
+#register-link:hover, #back-link:hover
+{
+	-webkit-transform: scale(1.1,1.1);
+	transition: .2s;
 }
 
 #register-link
 {
 	background: url('../images/register-button.png');
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 #back-link
