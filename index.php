@@ -19,7 +19,7 @@
 				<input type="submit" value=" " id="login-button" name="submit"/>
 			</form>
 			<br>
-			<a id="register-link" href="register.php">Register Here</a>
+			<a id="register-link" href="register.php"></a>
 			
 			<?php
 				if(isset($_POST['submit'])){

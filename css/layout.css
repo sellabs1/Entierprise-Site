@@ -65,7 +65,17 @@
 {
 	bottom: 60px;
 	margin-left: 120px;
-	position: relative;
+	position: absolute;
+}
+
+#register-link
+{
+	background: url('../images/register-button.png');
+}
+
+#back-link
+{
+	background: url('../images/back-button.png');
 }
 
 #register-form
@@ -83,6 +93,7 @@
 	font-family: Mont-Bold;
 	width: 802px;
 	height: 450px;
+	position: relative;
 	margin: 0 auto;
 	margin-top: 220px;
 	border-radius: 20px;
