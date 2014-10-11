@@ -4,16 +4,6 @@
 	if (isset($_SESSION['username'])) {
 		header('location: userHome.php');
 	}
-
-	if(isset($_POST['submitReg'])){
-
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-		$email = $_POST['email'];
-
-		$object = new User();
-		$object->Register($username, $password, $email);
-	}
 ?>
 
 <html>
@@ -38,6 +28,19 @@
 				<input type="submit" value=" " id="reg-button" name="submitReg"/>
 			</form>
 			<a id="back-link" href="index.php">Back</a>
+			
+			<?php
+				if(isset($_POST['submitReg'])){
+
+					$username = $_POST['username'];
+					$password = $_POST['password'];
+					$email = $_POST['email'];
+
+					$object = new User();
+					$object->Register($username, $password, $email);
+				}
+			?>
+			
 		</div>
 	</div>
 </body>

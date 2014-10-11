@@ -2,15 +2,6 @@
 	
 	include_once('user.php');
 
-	if(isset($_POST['submit'])){
-
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-
-		$object = new User();
-		$object->Login($username, $password);
-	}
-
 ?>
 <html>
 
@@ -29,6 +20,18 @@
 			</form>
 			<br>
 			<a id="register-link" href="register.php">Register Here</a>
+			
+			<?php
+				if(isset($_POST['submit'])){
+
+					$username = $_POST['username'];
+					$password = $_POST['password'];
+
+					$object = new User();
+					$object->Login($username, $password);
+				}
+			?>
+			
 		</div>
 	</div>
 </body>
