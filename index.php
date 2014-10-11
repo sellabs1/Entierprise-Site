@@ -14,8 +14,8 @@
 	<div id="container">
 		<div id="login-form" class="form-container">
 			<form method="post" action="index.php">
-				<input type="text" name="username" placeholder="Username"/><br>
-				<input type="password" name="password" placeholder="Password"/><br>
+				<input type="text" name="username" placeholder="Username" required/><br>
+				<input type="password" name="password" placeholder="Password" required/><br>
 				<input type="submit" value=" " id="login-button" name="submit"/>
 			</form>
 			<br>
@@ -31,7 +31,7 @@
 					$object->Login($username, $password);
 				}
 			?>
-			
+
 		</div>
 	</div>
 </body>

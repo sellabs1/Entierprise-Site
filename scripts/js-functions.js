@@ -7,6 +7,7 @@ $(document).ready(function(){
 	
 	var passFlag = 0;
 	var userFlag = 0;
+	var intputElements = document.getElementsByTagName("INPUT");
 
 	$("#regUsername").keyup(function (e) { //user types username on inputfiled
 
@@ -55,6 +56,28 @@ $(document).ready(function(){
    			button.prop('disabled', true);
    		}
 	});
+
+
+    for (var i = 0; i < intputElements.length; i++) {
+
+        intputElements[i].oninvalid = function (e) {
+            
+            e.target.setCustomValidity("");
+
+            if (!e.target.validity.valid) {
+
+                if (e.target.name == "username") {
+                    e.target.setCustomValidity("Please enter a username with 2-20 characters");
+                }
+                else if(e.target.name == "password") {
+                    e.target.setCustomValidity("Please enter a password with 1 Uppercase letter, 1 Lowercase letter, and 1 number");
+                }
+                else if(e.target.name == "email") {
+                	e.target.setCustomValidity("Please enter a valid email address. Example: joe@outlook.com");
+                }
+            }
+        };
+    }
 })
 
 

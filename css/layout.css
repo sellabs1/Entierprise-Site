@@ -131,11 +131,11 @@ h2
 
 #login-popup, #register-popup
 {	
-	font-style: Mont-Bold;
 	font-size: 20px;
-	width: 400px;
+	width: 600px;
 	text-align: center;
-	position: absolute;
+	position: relative;
+	left: 95;
 }
 
 #reg-button
