@@ -19,10 +19,10 @@
 	<div id="container">
 		<div id="register-form" class="form-container">
 			<form method="post" action="register.php">
-				<input id="regUsername" type="text" name="username" placeholder="Username" required/>
+				<input id="regUsername" type="text" name="username" placeholder="Username" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"/>
 				<span id="user-result"></span><br>
-				<input id="pass" type="password" name="password" placeholder="Password" required/><br>
-				<input id="confPass" type="password" name="confPassword" placeholder="Confirm Password" required/>
+				<input id="pass" type="password" name="password" placeholder="Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/><br>
+				<input id="confPass" type="password" name="confPassword" placeholder="Confirm Password"/>
 				<span id="pass-result"></span><br>
 				<input type="text" name="email" placeholder="Email" required/><br>
 				<input type="submit" value=" " id="reg-button" name="submitReg"/>
@@ -40,7 +40,7 @@
 					$object->Register($username, $password, $email);
 				}
 			?>
-			
+
 		</div>
 	</div>
 </body>
