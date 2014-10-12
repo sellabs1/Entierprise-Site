@@ -15,8 +15,10 @@ class Crud{
 		$this->db = $this->db->dbConnect();
 	}
 	
+	//serverPlayers function. Gets a count of how many players are in a specified server
 	public function serverPlayers($id){
-		$query = $this->db->prepare("SELECT COUNT(*) FROM UserServer WHERE ServerId = $id GROUP BY ServerId");
+		$query = $this->db->prepare("SELECT COUNT(*) FROM UserServer WHERE ServerId = ? GROUP BY ServerId");
+		$query->bindParam(1, $id);
 		$query->execute();
 
 		return $query->fetchColumn();
@@ -71,13 +73,14 @@ class Crud{
 		//Displays the edit form for the selected row
 		echo "<form id='editForm' name='editForm' method='post' action='#'>";
 
-		//Displays each field from the selected row in textareas
-		for($i = 0; $i < $colCount; $i++){
-			echo "<label for='".$columns[$i]."'>".$columns[$i]."</label>";
-			echo "<textarea class='textarea' name='".$columns[$i]."'>".$fields[$i]."</textarea></br>";	
-		}
+			//Displays each field from the selected row in textareas
+			for($i = 0; $i < $colCount; $i++){
+				echo "<label for='".$columns[$i]."'>".$columns[$i]."</label>";
+				echo "<textarea class='textarea' name='".$columns[$i]."'>".$fields[$i]."</textarea></br>";	
+			}
 
-		echo "<input type='submit' value='update' name='editUpdate'></input>";
+			echo "<input type='submit' value='update' name='editUpdate'></input>";
+			
 		echo "</form>";	
 	}
 
@@ -116,7 +119,7 @@ class Crud{
 		$query->execute();
 	}
 
-	//delet row function.
+	//delete row function.
 	public function deleteRow($columns, $table, $id){
 
 		$rowId = $columns[0];
@@ -157,19 +160,38 @@ class Crud{
 						echo "<th>Select</th>";
 					echo "</tr>";
 
+					//Prints a table row for every server
 					foreach ($result as $row) {
-							echo "<tr>";
-								echo "<form id='server-form' method='POST' action='game.php'>";
-									echo "<td>".$row['ServerName']."</td>";
-									echo "<td>".$row['Location']."</td>";
-									echo "<td>".$this->serverPlayers($row['ServerId'])."/5</td>";
-									echo "<td>".$row['CurrentStatus']."</td>";
-									echo "<input type='hidden' name='serverAddress' value='".$row['ServerAddress']."'>";
-									echo "<input type='hidden' name='serverPort' value='".$row['ServerPort']."'>";
 
-									echo "<td><input type='submit' name='server-submit' value='Join'></td>";
-									echo "</form>";
-							echo "</tr>";
+						//Gets the number of players currently in each server
+						$numPlayers = $this->serverPlayers($row['ServerId']);
+						//If there are players in the server, assign that number to numPlayers
+						if($numPlayers){
+							$numPlayers = $this->serverPlayers($row['ServerId']);
+						}
+						else{
+							$numPlayers = 0;
+						}
+
+						echo "<tr>";
+							echo "<form id='server-form' method='POST' action='game.php'>";
+								echo "<td>".$row['ServerName']."</td>";
+								echo "<td>".$row['Location']."</td>";
+								echo "<td>".$numPlayers."/5</td>";
+								echo "<td>".$row['CurrentStatus']."</td>";
+								echo "<input type='hidden' name='serverAddress' value='".$row['ServerAddress']."'>";
+								echo "<input type='hidden' name='serverPort' value='".$row['ServerPort']."'>";
+
+								//If the server is offline or in game, the join button will not be displayed
+								if (strtolower($row['CurrentStatus']) == "offline" || strtolower($row['CurrentStatus']) == "in game") {
+									echo "<td>Unavailable</td>";
+								}
+								else{
+									echo "<td><input type='submit' class='server-submit' name='server-submit' value=''></td>";
+								}
+								
+							echo "</form>";
+						echo "</tr>";
 					}
 
 				echo "</table>";

@@ -31,6 +31,10 @@
 
 	<div id="container">
 
+		<div id="name-cloud">
+			<div id="title"><h1 id='welcome'><?php echo "Welcome, ".$_SESSION['username']; ?></h1></div>
+		</div>
+
 		<div id ="nav">
 
 			<form method="POST" action="userHome.php">
@@ -47,7 +51,7 @@
 
 		<div id="main-menu"></div> 
 
-		<div id="title"><h1 id='welcome'><?php echo "Welcome, ".$_SESSION['username']; ?></h1></div>
+		
 	</div>
 </body>
 </html>
